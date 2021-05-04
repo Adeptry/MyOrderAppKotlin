@@ -90,7 +90,7 @@ class LocationsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePa
     /**
     * 
     * 
-    * @param id  
+    * @param moaId  
     * @return kotlin.collections.List<MoaLocation>
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -98,8 +98,8 @@ class LocationsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePa
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getMerchantLocations(id: kotlin.String) : kotlin.collections.List<MoaLocation> {
-        val localVariableConfig = getMerchantLocationsRequestConfig(id = id)
+    fun getMerchantLocations(moaId: kotlin.String) : kotlin.collections.List<MoaLocation> {
+        val localVariableConfig = getMerchantLocationsRequestConfig(moaId = moaId)
 
         val localVarResponse = request<kotlin.collections.List<MoaLocation>>(
             localVariableConfig
@@ -123,17 +123,17 @@ class LocationsApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePa
     /**
     * To obtain the request config of the operation getMerchantLocations
     *
-    * @param id  
+    * @param moaId  
     * @return RequestConfig
     */
-    fun getMerchantLocationsRequestConfig(id: kotlin.String) : RequestConfig {
+    fun getMerchantLocationsRequestConfig(moaId: kotlin.String) : RequestConfig {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         
         val localVariableConfig = RequestConfig(
             method = RequestMethod.GET,
-            path = "/v1/merchants/{id}/locations".replace("{"+"id"+"}", "$id"),
+            path = "/v1/merchants/{moaId}/locations".replace("{"+"moaId"+"}", "$moaId"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

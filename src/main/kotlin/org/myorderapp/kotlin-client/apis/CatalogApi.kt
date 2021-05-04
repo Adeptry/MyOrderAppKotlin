@@ -90,7 +90,7 @@ class CatalogApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     /**
     * 
     * 
-    * @param id  
+    * @param moaId  
     * @return MoaCatalog
     * @throws UnsupportedOperationException If the API returns an informational or redirection response
     * @throws ClientException If the API returns a client error response
@@ -98,8 +98,8 @@ class CatalogApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun getMerchantCatalog(id: kotlin.String) : MoaCatalog {
-        val localVariableConfig = getMerchantCatalogRequestConfig(id = id)
+    fun getMerchantCatalog(moaId: kotlin.String) : MoaCatalog {
+        val localVariableConfig = getMerchantCatalogRequestConfig(moaId = moaId)
 
         val localVarResponse = request<MoaCatalog>(
             localVariableConfig
@@ -123,17 +123,17 @@ class CatalogApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath
     /**
     * To obtain the request config of the operation getMerchantCatalog
     *
-    * @param id  
+    * @param moaId  
     * @return RequestConfig
     */
-    fun getMerchantCatalogRequestConfig(id: kotlin.String) : RequestConfig {
+    fun getMerchantCatalogRequestConfig(moaId: kotlin.String) : RequestConfig {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
         
         val localVariableConfig = RequestConfig(
             method = RequestMethod.GET,
-            path = "/v1/merchants/{id}/catalog".replace("{"+"id"+"}", "$id"),
+            path = "/v1/merchants/{moaId}/catalog".replace("{"+"moaId"+"}", "$moaId"),
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

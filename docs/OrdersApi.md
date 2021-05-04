@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**deleteCurrentCustomersCurrentOrder**](OrdersApi.md#deleteCurrentCustomersCurrentOrder) | **DELETE** /v1/customers/current/orders/current | 
 [**getCurrentCustomerOrders**](OrdersApi.md#getCurrentCustomerOrders) | **GET** /v1/customers/current/orders | 
 [**getCurrentCustomersCurrentOrder**](OrdersApi.md#getCurrentCustomersCurrentOrder) | **GET** /v1/customers/current/orders/current | 
+[**getOrderWithId**](OrdersApi.md#getOrderWithId) | **GET** /v1/orders/{moaId} | 
 [**payForCurrentCustomersCurrentOrder**](OrdersApi.md#payForCurrentCustomersCurrentOrder) | **PUT** /v1/customers/current/orders/current/payment | 
 [**removeVariationFromCurrentCustomersCurrentOrder**](OrdersApi.md#removeVariationFromCurrentCustomersCurrentOrder) | **DELETE** /v1/customers/current/orders/current/variation | 
 
@@ -226,6 +227,53 @@ try {
 
 ### Parameters
 This endpoint does not need any parameter.
+
+### Return type
+
+[**MoaOrder**](MoaOrder.md)
+
+### Authorization
+
+
+Configure bearer:
+    ApiClient.accessToken = ""
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getOrderWithId"></a>
+# **getOrderWithId**
+> MoaOrder getOrderWithId(moaId)
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import org.myorderapp.kotlin-client.infrastructure.*
+//import org.myorderapp.kotlin-client.models.*
+
+val apiInstance = OrdersApi()
+val moaId : kotlin.String = moaId_example // kotlin.String | 
+try {
+    val result : MoaOrder = apiInstance.getOrderWithId(moaId)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling OrdersApi#getOrderWithId")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling OrdersApi#getOrderWithId")
+    e.printStackTrace()
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **moaId** | **kotlin.String**|  |
 
 ### Return type
 

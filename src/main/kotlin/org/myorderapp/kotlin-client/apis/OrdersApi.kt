@@ -324,6 +324,61 @@ class OrdersApi(basePath: kotlin.String = defaultBasePath) : ApiClient(basePath)
     /**
     * 
     * 
+    * @param moaId  
+    * @return MoaOrder
+    * @throws UnsupportedOperationException If the API returns an informational or redirection response
+    * @throws ClientException If the API returns a client error response
+    * @throws ServerException If the API returns a server error response
+    */
+    @Suppress("UNCHECKED_CAST")
+    @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
+    fun getOrderWithId(moaId: kotlin.String) : MoaOrder {
+        val localVariableConfig = getOrderWithIdRequestConfig(moaId = moaId)
+
+        val localVarResponse = request<MoaOrder>(
+            localVariableConfig
+        )
+
+        return when (localVarResponse.responseType) {
+            ResponseType.Success -> (localVarResponse as Success<*>).data as MoaOrder
+            ResponseType.Informational -> throw UnsupportedOperationException("Client does not support Informational responses.")
+            ResponseType.Redirection -> throw UnsupportedOperationException("Client does not support Redirection responses.")
+            ResponseType.ClientError -> {
+                val localVarError = localVarResponse as ClientError<*>
+                throw ClientException("Client error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+            ResponseType.ServerError -> {
+                val localVarError = localVarResponse as ServerError<*>
+                throw ServerException("Server error : ${localVarError.statusCode} ${localVarError.message.orEmpty()}", localVarError.statusCode, localVarResponse)
+            }
+        }
+    }
+
+    /**
+    * To obtain the request config of the operation getOrderWithId
+    *
+    * @param moaId  
+    * @return RequestConfig
+    */
+    fun getOrderWithIdRequestConfig(moaId: kotlin.String) : RequestConfig {
+        val localVariableBody: kotlin.Any? = null
+        val localVariableQuery: MultiValueMap = mutableMapOf()
+        val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
+        
+        val localVariableConfig = RequestConfig(
+            method = RequestMethod.GET,
+            path = "/v1/orders/{moaId}".replace("{"+"moaId"+"}", "$moaId"),
+            query = localVariableQuery,
+            headers = localVariableHeaders,
+            body = localVariableBody
+        )
+
+        return localVariableConfig
+    }
+
+    /**
+    * 
+    * 
     * @param moaOrderPayInput  
     * @return MoaOrder
     * @throws UnsupportedOperationException If the API returns an informational or redirection response

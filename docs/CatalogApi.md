@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCurrentCustomersMerchantsCatalog**](CatalogApi.md#getCurrentCustomersMerchantsCatalog) | **GET** /v1/customers/current/merchant/catalog | 
-[**getMerchantCatalog**](CatalogApi.md#getMerchantCatalog) | **GET** /v1/merchants/{id}/catalog | 
+[**getMerchantCatalog**](CatalogApi.md#getMerchantCatalog) | **GET** /v1/merchants/{moaId}/catalog | 
 
 
 <a name="getCurrentCustomersMerchantsCatalog"></a>
@@ -53,7 +53,7 @@ Configure bearer:
 
 <a name="getMerchantCatalog"></a>
 # **getMerchantCatalog**
-> MoaCatalog getMerchantCatalog(id)
+> MoaCatalog getMerchantCatalog(moaId)
 
 
 
@@ -64,9 +64,9 @@ Configure bearer:
 //import org.myorderapp.kotlin-client.models.*
 
 val apiInstance = CatalogApi()
-val id : kotlin.String = id_example // kotlin.String | 
+val moaId : kotlin.String = moaId_example // kotlin.String | 
 try {
-    val result : MoaCatalog = apiInstance.getMerchantCatalog(id)
+    val result : MoaCatalog = apiInstance.getMerchantCatalog(moaId)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling CatalogApi#getMerchantCatalog")
@@ -81,7 +81,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **kotlin.String**|  |
+ **moaId** | **kotlin.String**|  |
 
 ### Return type
 

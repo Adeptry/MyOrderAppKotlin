@@ -40,17 +40,18 @@ Class | Method | HTTP request | Description
 *CardsApi* | [**deleteCardForCurrentCustomer**](docs/CardsApi.md#deletecardforcurrentcustomer) | **DELETE** /v1/customers/current/cards | 
 *CardsApi* | [**getCardsForCurrentCustomer**](docs/CardsApi.md#getcardsforcurrentcustomer) | **GET** /v1/customers/current/cards | 
 *CatalogApi* | [**getCurrentCustomersMerchantsCatalog**](docs/CatalogApi.md#getcurrentcustomersmerchantscatalog) | **GET** /v1/customers/current/merchant/catalog | 
-*CatalogApi* | [**getMerchantCatalog**](docs/CatalogApi.md#getmerchantcatalog) | **GET** /v1/merchants/{id}/catalog | 
+*CatalogApi* | [**getMerchantCatalog**](docs/CatalogApi.md#getmerchantcatalog) | **GET** /v1/merchants/{moaId}/catalog | 
 *CustomersApi* | [**createCustomer**](docs/CustomersApi.md#createcustomer) | **POST** /v1/customers | 
 *CustomersApi* | [**getCurrentCustomer**](docs/CustomersApi.md#getcurrentcustomer) | **GET** /v1/customers/current | 
 *CustomersApi* | [**updateCurrentCustomer**](docs/CustomersApi.md#updatecurrentcustomer) | **PATCH** /v1/customers/current | 
 *LocationsApi* | [**getCurrentCustomersMerchantsLocations**](docs/LocationsApi.md#getcurrentcustomersmerchantslocations) | **GET** /v1/customers/current/merchant/locations | 
-*LocationsApi* | [**getMerchantLocations**](docs/LocationsApi.md#getmerchantlocations) | **GET** /v1/merchants/{id}/locations | 
+*LocationsApi* | [**getMerchantLocations**](docs/LocationsApi.md#getmerchantlocations) | **GET** /v1/merchants/{moaId}/locations | 
 *OrdersApi* | [**addVariationToCurrentCustomersCurrentOrder**](docs/OrdersApi.md#addvariationtocurrentcustomerscurrentorder) | **PUT** /v1/customers/current/orders/current/variation | 
 *OrdersApi* | [**createOrderForCurrentCustomer**](docs/OrdersApi.md#createorderforcurrentcustomer) | **POST** /v1/customers/current/orders/current | 
 *OrdersApi* | [**deleteCurrentCustomersCurrentOrder**](docs/OrdersApi.md#deletecurrentcustomerscurrentorder) | **DELETE** /v1/customers/current/orders/current | 
 *OrdersApi* | [**getCurrentCustomerOrders**](docs/OrdersApi.md#getcurrentcustomerorders) | **GET** /v1/customers/current/orders | 
 *OrdersApi* | [**getCurrentCustomersCurrentOrder**](docs/OrdersApi.md#getcurrentcustomerscurrentorder) | **GET** /v1/customers/current/orders/current | 
+*OrdersApi* | [**getOrderWithId**](docs/OrdersApi.md#getorderwithid) | **GET** /v1/orders/{moaId} | 
 *OrdersApi* | [**payForCurrentCustomersCurrentOrder**](docs/OrdersApi.md#payforcurrentcustomerscurrentorder) | **PUT** /v1/customers/current/orders/current/payment | 
 *OrdersApi* | [**removeVariationFromCurrentCustomersCurrentOrder**](docs/OrdersApi.md#removevariationfromcurrentcustomerscurrentorder) | **DELETE** /v1/customers/current/orders/current/variation | 
 

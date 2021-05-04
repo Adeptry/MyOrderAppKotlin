@@ -27,8 +27,8 @@ import com.squareup.moshi.Json
  * @param moaId 
  * @param createDate 
  * @param updateDate 
- * @param squareOrderId 
- * @param squarePaymentId 
+ * @param orderSquareId 
+ * @param paymentSquareId 
  * @param customerMoaId 
  * @param merchantMoaId 
  * @param merchant 
@@ -49,10 +49,10 @@ data class MoaOrder (
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")
     val updateDate: java.time.OffsetDateTime? = null,
-    @Json(name = "squareOrderId")
-    val squareOrderId: kotlin.String? = null,
-    @Json(name = "squarePaymentId")
-    val squarePaymentId: kotlin.String? = null,
+    @Json(name = "orderSquareId")
+    val orderSquareId: kotlin.String? = null,
+    @Json(name = "paymentSquareId")
+    val paymentSquareId: kotlin.String? = null,
     @Json(name = "customerMoaId")
     val customerMoaId: kotlin.String? = null,
     @Json(name = "merchantMoaId")
