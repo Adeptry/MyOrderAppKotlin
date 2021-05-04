@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
  * 
  * @param catalog 
  * @param items 
- * @param id 
+ * @param moaId 
  * @param createDate 
  * @param updateDate 
  * @param squareId 
@@ -32,8 +32,8 @@ data class MoaCategory (
     val catalog: MoaCatalog? = null,
     @Json(name = "items")
     val items: kotlin.collections.List<MoaItem>? = null,
-    @Json(name = "id")
-    val id: kotlin.String? = null,
+    @Json(name = "moaId")
+    val moaId: kotlin.String? = null,
     @Json(name = "createDate")
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")

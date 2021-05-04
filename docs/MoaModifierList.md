@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **item** | [**MoaItem**](MoaItem.md) |  |  [optional]
 **modifiers** | [**kotlin.collections.List&lt;MoaModifier&gt;**](MoaModifier.md) |  |  [optional]
-**id** | **kotlin.String** |  |  [optional]
+**moaId** | **kotlin.String** |  |  [optional]
 **createDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **updateDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **squareId** | **kotlin.String** |  |  [optional]

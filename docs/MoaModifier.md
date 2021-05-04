@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **modifierList** | [**MoaModifierList**](MoaModifierList.md) |  |  [optional]
-**id** | **kotlin.String** |  |  [optional]
+**moaId** | **kotlin.String** |  |  [optional]
 **createDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **updateDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **squareId** | **kotlin.String** |  |  [optional]

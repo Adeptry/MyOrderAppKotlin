@@ -18,7 +18,7 @@ import com.squareup.moshi.Json
  * 
  * @param email 
  * @param password 
- * @param merchantId 
+ * @param merchantMoaId 
  */
 
 data class MoaCustomerCreateInput (
@@ -26,7 +26,7 @@ data class MoaCustomerCreateInput (
     val email: kotlin.String,
     @Json(name = "password")
     val password: kotlin.String,
-    @Json(name = "merchantId")
-    val merchantId: kotlin.String
+    @Json(name = "merchantMoaId")
+    val merchantMoaId: kotlin.String
 )
 

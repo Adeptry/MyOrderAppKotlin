@@ -45,8 +45,8 @@ class AuthenticationApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     */
     @Suppress("UNCHECKED_CAST")
     @Throws(UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun postAuthentication(moaAuthenticationInput: MoaAuthenticationInput) : MoaAuthenticationOutput {
-        val localVariableConfig = postAuthenticationRequestConfig(moaAuthenticationInput = moaAuthenticationInput)
+    fun authenticate(moaAuthenticationInput: MoaAuthenticationInput) : MoaAuthenticationOutput {
+        val localVariableConfig = authenticateRequestConfig(moaAuthenticationInput = moaAuthenticationInput)
 
         val localVarResponse = request<MoaAuthenticationOutput>(
             localVariableConfig
@@ -68,12 +68,12 @@ class AuthenticationApi(basePath: kotlin.String = defaultBasePath) : ApiClient(b
     }
 
     /**
-    * To obtain the request config of the operation postAuthentication
+    * To obtain the request config of the operation authenticate
     *
     * @param moaAuthenticationInput  
     * @return RequestConfig
     */
-    fun postAuthenticationRequestConfig(moaAuthenticationInput: MoaAuthenticationInput) : RequestConfig {
+    fun authenticateRequestConfig(moaAuthenticationInput: MoaAuthenticationInput) : RequestConfig {
         val localVariableBody: kotlin.Any? = moaAuthenticationInput
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()

@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**postAuthentication**](AuthenticationApi.md#postAuthentication) | **POST** /v1/authentication | 
+[**authenticate**](AuthenticationApi.md#authenticate) | **POST** /v1/authentication | 
 
 
-<a name="postAuthentication"></a>
-# **postAuthentication**
-> MoaAuthenticationOutput postAuthentication(moaAuthenticationInput)
+<a name="authenticate"></a>
+# **authenticate**
+> MoaAuthenticationOutput authenticate(moaAuthenticationInput)
 
 
 
@@ -22,13 +22,13 @@ Method | HTTP request | Description
 val apiInstance = AuthenticationApi()
 val moaAuthenticationInput : MoaAuthenticationInput =  // MoaAuthenticationInput | 
 try {
-    val result : MoaAuthenticationOutput = apiInstance.postAuthentication(moaAuthenticationInput)
+    val result : MoaAuthenticationOutput = apiInstance.authenticate(moaAuthenticationInput)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling AuthenticationApi#postAuthentication")
+    println("4xx response calling AuthenticationApi#authenticate")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling AuthenticationApi#postAuthentication")
+    println("5xx response calling AuthenticationApi#authenticate")
     e.printStackTrace()
 }
 ```

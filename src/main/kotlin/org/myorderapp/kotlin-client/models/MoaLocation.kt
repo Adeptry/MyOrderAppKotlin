@@ -17,7 +17,7 @@ import com.squareup.moshi.Json
 
 /**
  * 
- * @param id 
+ * @param moaId 
  * @param createDate 
  * @param updateDate 
  * @param name 
@@ -26,13 +26,13 @@ import com.squareup.moshi.Json
  * @param latitude 
  * @param longitude 
  * @param status 
- * @param merchantId 
+ * @param merchantMoaId 
  * @param merchant 
  */
 
 data class MoaLocation (
-    @Json(name = "id")
-    val id: kotlin.String? = null,
+    @Json(name = "moaId")
+    val moaId: kotlin.String? = null,
     @Json(name = "createDate")
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")
@@ -49,8 +49,8 @@ data class MoaLocation (
     val longitude: java.math.BigDecimal? = null,
     @Json(name = "status")
     val status: kotlin.String? = null,
-    @Json(name = "merchantId")
-    val merchantId: kotlin.String? = null,
+    @Json(name = "merchantMoaId")
+    val merchantMoaId: kotlin.String? = null,
     @Json(name = "merchant")
     val merchant: MoaMerchant? = null
 )

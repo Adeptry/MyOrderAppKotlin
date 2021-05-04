@@ -18,7 +18,7 @@ import com.squareup.moshi.Json
 /**
  * 
  * @param catalog 
- * @param id 
+ * @param moaId 
  * @param createDate 
  * @param updateDate 
  * @param email 
@@ -30,8 +30,8 @@ import com.squareup.moshi.Json
 data class MoaMerchant (
     @Json(name = "catalog")
     val catalog: MoaCatalog? = null,
-    @Json(name = "id")
-    val id: kotlin.String? = null,
+    @Json(name = "moaId")
+    val moaId: kotlin.String? = null,
     @Json(name = "createDate")
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")

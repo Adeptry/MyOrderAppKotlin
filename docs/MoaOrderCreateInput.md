@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**locationId** | **kotlin.String** |  | 
+**locationMoaId** | **kotlin.String** |  | 
 
 
 

@@ -16,13 +16,10 @@ import com.squareup.moshi.Json
 
 /**
  * 
- * @param response 
  * @param status 
  */
 
 data class MoaError (
-    @Json(name = "response")
-    val response: kotlin.Any? = null,
     @Json(name = "status")
     val status: java.math.BigDecimal? = null
 )

@@ -16,11 +16,11 @@ import com.squareup.moshi.Json
 
 /**
  * 
- * @param locationId 
+ * @param locationMoaId 
  */
 
 data class MoaOrderCreateInput (
-    @Json(name = "locationId")
-    val locationId: kotlin.String
+    @Json(name = "locationMoaId")
+    val locationMoaId: kotlin.String
 )
 

@@ -21,12 +21,12 @@ import com.squareup.moshi.Json
  * @param accessToken 
  * @param currentOrder 
  * @param orders 
- * @param id 
+ * @param moaId 
  * @param createDate 
  * @param updateDate 
  * @param email 
  * @param phoneNumber 
- * @param merchantId 
+ * @param merchantMoaId 
  * @param merchant 
  */
 
@@ -37,8 +37,8 @@ data class MoaCustomer (
     val currentOrder: MoaOrder? = null,
     @Json(name = "orders")
     val orders: kotlin.collections.List<MoaOrder>? = null,
-    @Json(name = "id")
-    val id: kotlin.String? = null,
+    @Json(name = "moaId")
+    val moaId: kotlin.String? = null,
     @Json(name = "createDate")
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")
@@ -47,8 +47,8 @@ data class MoaCustomer (
     val email: kotlin.String? = null,
     @Json(name = "phoneNumber")
     val phoneNumber: kotlin.String? = null,
-    @Json(name = "merchantId")
-    val merchantId: kotlin.String? = null,
+    @Json(name = "merchantMoaId")
+    val merchantMoaId: kotlin.String? = null,
     @Json(name = "merchant")
     val merchant: MoaMerchant? = null
 )

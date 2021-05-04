@@ -16,11 +16,11 @@ import com.squareup.moshi.Json
 
 /**
  * 
- * @param squareCardId 
+ * @param cardSquareId 
  */
 
 data class SquareDeleteCustomerCardInput (
-    @Json(name = "squareCardId")
-    val squareCardId: kotlin.String? = null
+    @Json(name = "cardSquareId")
+    val cardSquareId: kotlin.String? = null
 )
 

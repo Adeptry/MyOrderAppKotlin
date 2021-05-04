@@ -18,7 +18,7 @@ import com.squareup.moshi.Json
 /**
  * 
  * @param item 
- * @param id 
+ * @param moaId 
  * @param createDate 
  * @param updateDate 
  * @param squareId 
@@ -29,8 +29,8 @@ import com.squareup.moshi.Json
 data class MoaVariation (
     @Json(name = "item")
     val item: MoaItem? = null,
-    @Json(name = "id")
-    val id: kotlin.String? = null,
+    @Json(name = "moaId")
+    val moaId: kotlin.String? = null,
     @Json(name = "createDate")
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")

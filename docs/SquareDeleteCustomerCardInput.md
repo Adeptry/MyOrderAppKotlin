@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**squareCardId** | **kotlin.String** |  |  [optional]
+**cardSquareId** | **kotlin.String** |  |  [optional]
 
 
 

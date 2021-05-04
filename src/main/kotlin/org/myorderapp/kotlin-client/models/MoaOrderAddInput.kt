@@ -16,20 +16,20 @@ import com.squareup.moshi.Json
 
 /**
  * 
- * @param variationId 
+ * @param variationMoaId 
  * @param quantity 
  * @param idempotencyKey 
- * @param modifiersIds 
+ * @param modifiersMoaIds 
  */
 
 data class MoaOrderAddInput (
-    @Json(name = "variationId")
-    val variationId: kotlin.String,
+    @Json(name = "variationMoaId")
+    val variationMoaId: kotlin.String,
     @Json(name = "quantity")
     val quantity: java.math.BigDecimal,
     @Json(name = "idempotencyKey")
     val idempotencyKey: kotlin.String,
-    @Json(name = "modifiersIds")
-    val modifiersIds: kotlin.collections.List<kotlin.String>? = null
+    @Json(name = "modifiersMoaIds")
+    val modifiersMoaIds: kotlin.collections.List<kotlin.String>? = null
 )
 

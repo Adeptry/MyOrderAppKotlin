@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
  * 
  * @param item 
  * @param modifiers 
- * @param id 
+ * @param moaId 
  * @param createDate 
  * @param updateDate 
  * @param squareId 
@@ -35,8 +35,8 @@ data class MoaModifierList (
     val item: MoaItem? = null,
     @Json(name = "modifiers")
     val modifiers: kotlin.collections.List<MoaModifier>? = null,
-    @Json(name = "id")
-    val id: kotlin.String? = null,
+    @Json(name = "moaId")
+    val moaId: kotlin.String? = null,
     @Json(name = "createDate")
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")

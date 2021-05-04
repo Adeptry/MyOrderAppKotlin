@@ -24,15 +24,15 @@ import com.squareup.moshi.Json
  * @param squareOrder 
  * @param squarePayment 
  * @param customer 
- * @param id 
+ * @param moaId 
  * @param createDate 
  * @param updateDate 
  * @param squareOrderId 
  * @param squarePaymentId 
- * @param customerId 
- * @param merchantId 
+ * @param customerMoaId 
+ * @param merchantMoaId 
  * @param merchant 
- * @param locationId 
+ * @param locationMoaId 
  * @param location 
  */
 
@@ -43,8 +43,8 @@ data class MoaOrder (
     val squarePayment: SquarePayment? = null,
     @Json(name = "customer")
     val customer: MoaCustomer? = null,
-    @Json(name = "id")
-    val id: kotlin.String? = null,
+    @Json(name = "moaId")
+    val moaId: kotlin.String? = null,
     @Json(name = "createDate")
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")
@@ -53,14 +53,14 @@ data class MoaOrder (
     val squareOrderId: kotlin.String? = null,
     @Json(name = "squarePaymentId")
     val squarePaymentId: kotlin.String? = null,
-    @Json(name = "customerId")
-    val customerId: kotlin.String? = null,
-    @Json(name = "merchantId")
-    val merchantId: kotlin.String? = null,
+    @Json(name = "customerMoaId")
+    val customerMoaId: kotlin.String? = null,
+    @Json(name = "merchantMoaId")
+    val merchantMoaId: kotlin.String? = null,
     @Json(name = "merchant")
     val merchant: MoaMerchant? = null,
-    @Json(name = "locationId")
-    val locationId: kotlin.String? = null,
+    @Json(name = "locationMoaId")
+    val locationMoaId: kotlin.String? = null,
     @Json(name = "location")
     val location: MoaLocation? = null
 )

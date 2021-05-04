@@ -22,14 +22,14 @@ import com.squareup.moshi.Json
  * @param category 
  * @param modifierLists 
  * @param variations 
- * @param id 
+ * @param moaId 
  * @param createDate 
  * @param updateDate 
  * @param squareId 
  * @param name 
  * @param priceInCents 
  * @param description 
- * @param categoryId 
+ * @param categoryMoaId 
  */
 
 data class MoaItem (
@@ -39,8 +39,8 @@ data class MoaItem (
     val modifierLists: kotlin.collections.List<MoaModifierList>? = null,
     @Json(name = "variations")
     val variations: kotlin.collections.List<MoaVariation>? = null,
-    @Json(name = "id")
-    val id: kotlin.String? = null,
+    @Json(name = "moaId")
+    val moaId: kotlin.String? = null,
     @Json(name = "createDate")
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")
@@ -53,7 +53,7 @@ data class MoaItem (
     val priceInCents: java.math.BigDecimal? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
-    @Json(name = "categoryId")
-    val categoryId: kotlin.String? = null
+    @Json(name = "categoryMoaId")
+    val categoryMoaId: kotlin.String? = null
 )
 

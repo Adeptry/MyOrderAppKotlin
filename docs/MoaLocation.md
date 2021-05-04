@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **kotlin.String** |  |  [optional]
+**moaId** | **kotlin.String** |  |  [optional]
 **createDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **updateDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
 **name** | **kotlin.String** |  |  [optional]
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **latitude** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
 **longitude** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
 **status** | **kotlin.String** |  |  [optional]
-**merchantId** | **kotlin.String** |  |  [optional]
+**merchantMoaId** | **kotlin.String** |  |  [optional]
 **merchant** | [**MoaMerchant**](MoaMerchant.md) |  |  [optional]
 
 
