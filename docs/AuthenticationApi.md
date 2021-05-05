@@ -16,8 +16,8 @@ Method | HTTP request | Description
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = AuthenticationApi()
 val moaAuthenticationInput : MoaAuthenticationInput =  // MoaAuthenticationInput | 

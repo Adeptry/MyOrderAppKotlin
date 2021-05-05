@@ -18,8 +18,8 @@ Method | HTTP request | Description
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = CustomersApi()
 val moaCustomerCreateInput : MoaCustomerCreateInput =  // MoaCustomerCreateInput | 
@@ -63,8 +63,8 @@ No authorization required
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = CustomersApi()
 try {
@@ -106,8 +106,8 @@ Configure bearer:
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = CustomersApi()
 val moaCustomerUpdateInput : MoaCustomerUpdateInput =  // MoaCustomerUpdateInput | 

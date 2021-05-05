@@ -23,8 +23,8 @@ Method | HTTP request | Description
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = OrdersApi()
 val moaOrderAddInput : MoaOrderAddInput =  // MoaOrderAddInput | 
@@ -70,8 +70,8 @@ Configure bearer:
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = OrdersApi()
 val moaOrderCreateInput : MoaOrderCreateInput =  // MoaOrderCreateInput | 
@@ -117,8 +117,8 @@ Configure bearer:
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = OrdersApi()
 try {
@@ -160,8 +160,8 @@ Configure bearer:
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = OrdersApi()
 val page : java.math.BigDecimal = 8.14 // java.math.BigDecimal | 
@@ -209,8 +209,8 @@ Configure bearer:
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = OrdersApi()
 try {
@@ -252,8 +252,8 @@ Configure bearer:
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = OrdersApi()
 val moaId : kotlin.String = moaId_example // kotlin.String | 
@@ -299,8 +299,8 @@ Configure bearer:
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = OrdersApi()
 val moaOrderPayInput : MoaOrderPayInput =  // MoaOrderPayInput | 
@@ -346,8 +346,8 @@ Configure bearer:
 ### Example
 ```kotlin
 // Import classes:
-//import org.myorderapp.kotlin-client.infrastructure.*
-//import org.myorderapp.kotlin-client.models.*
+//import com.adeptry.moaclient.infrastructure.*
+//import com.adeptry.moaclient.models.*
 
 val apiInstance = OrdersApi()
 val moaOrderRemoveInput : MoaOrderRemoveInput =  // MoaOrderRemoveInput | 
