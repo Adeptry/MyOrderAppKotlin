@@ -13,9 +13,6 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
@@ -24,7 +21,6 @@ import kotlinx.parcelize.Parcelize
  * @param idempotencyKey 
  * @param modifiersMoaIds 
  */
-@Parcelize
 
 data class MoaOrderAddInput (
     @Json(name = "variationMoaId")
@@ -35,5 +31,5 @@ data class MoaOrderAddInput (
     val idempotencyKey: kotlin.String,
     @Json(name = "modifiersMoaIds")
     val modifiersMoaIds: kotlin.collections.List<kotlin.String>? = null
-) : Parcelable
+)
 

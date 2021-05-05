@@ -14,9 +14,6 @@ package com.adeptry.myorderapp.client.models
 import com.adeptry.myorderapp.client.models.MoaOrder
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
@@ -24,7 +21,6 @@ import kotlinx.parcelize.Parcelize
  * @param count 
  * @param pages 
  */
-@Parcelize
 
 data class MoaOrderPaginatedResponse (
     @Json(name = "entities")
@@ -33,5 +29,5 @@ data class MoaOrderPaginatedResponse (
     val count: java.math.BigDecimal? = null,
     @Json(name = "pages")
     val pages: java.math.BigDecimal? = null
-) : Parcelable
+)
 

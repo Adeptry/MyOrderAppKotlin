@@ -13,18 +13,14 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
  * @param locationMoaId 
  */
-@Parcelize
 
 data class MoaOrderCreateInput (
     @Json(name = "locationMoaId")
     val locationMoaId: kotlin.String
-) : Parcelable
+)
 

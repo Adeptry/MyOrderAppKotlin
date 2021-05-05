@@ -18,9 +18,6 @@ import com.adeptry.myorderapp.client.models.SquareOrder
 import com.adeptry.myorderapp.client.models.SquarePayment
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
@@ -38,7 +35,6 @@ import kotlinx.parcelize.Parcelize
  * @param locationMoaId 
  * @param location 
  */
-@Parcelize
 
 data class MoaOrder (
     @Json(name = "squareOrder")
@@ -67,5 +63,5 @@ data class MoaOrder (
     val locationMoaId: kotlin.String? = null,
     @Json(name = "location")
     val location: MoaLocation? = null
-) : Parcelable
+)
 

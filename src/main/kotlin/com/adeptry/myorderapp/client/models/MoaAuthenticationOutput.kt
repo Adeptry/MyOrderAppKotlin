@@ -13,32 +13,28 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
  * @param accessToken 
  * @param userType 
  */
-@Parcelize
 
 data class MoaAuthenticationOutput (
     @Json(name = "accessToken")
     val accessToken: kotlin.String? = null,
     @Json(name = "userType")
     val userType: MoaAuthenticationOutput.UserType? = null
-) : Parcelable {
+) {
 
     /**
      * 
-     * Values: aDMINISTRATOR,mERCHANT,cUSTOMER
+     * Values: ADMINISTRATOR,MERCHANT,CUSTOMER
      */
     enum class UserType(val value: kotlin.String) {
-        @Json(name = "ADMINISTRATOR") aDMINISTRATOR("ADMINISTRATOR"),
-        @Json(name = "MERCHANT") mERCHANT("MERCHANT"),
-        @Json(name = "CUSTOMER") cUSTOMER("CUSTOMER");
+        @Json(name = "ADMINISTRATOR") ADMINISTRATOR("ADMINISTRATOR"),
+        @Json(name = "MERCHANT") MERCHANT("MERCHANT"),
+        @Json(name = "CUSTOMER") CUSTOMER("CUSTOMER");
     }
 }
 

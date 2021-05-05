@@ -15,9 +15,6 @@ import com.adeptry.myorderapp.client.models.SquareAddress
 import com.adeptry.myorderapp.client.models.SquareMoney
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
@@ -51,7 +48,6 @@ import kotlinx.parcelize.Parcelize
  * @param receiptUrl 
  * @param versionToken 
  */
-@Parcelize
 
 data class SquarePayment (
     @Json(name = "id")
@@ -112,5 +108,5 @@ data class SquarePayment (
     val receiptUrl: kotlin.String? = null,
     @Json(name = "versionToken")
     val versionToken: kotlin.String? = null
-) : Parcelable
+)
 

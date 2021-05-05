@@ -13,21 +13,17 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
  * @param amount 
  * @param currency 
  */
-@Parcelize
 
 data class SquareMoney (
     @Json(name = "amount")
     val amount: java.math.BigDecimal? = null,
     @Json(name = "currency")
     val currency: kotlin.String? = null
-) : Parcelable
+)
 

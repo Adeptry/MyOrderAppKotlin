@@ -13,9 +13,6 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
@@ -23,7 +20,6 @@ import kotlinx.parcelize.Parcelize
  * @param password 
  * @param merchantMoaId 
  */
-@Parcelize
 
 data class MoaCustomerCreateInput (
     @Json(name = "email")
@@ -32,5 +28,5 @@ data class MoaCustomerCreateInput (
     val password: kotlin.String,
     @Json(name = "merchantMoaId")
     val merchantMoaId: kotlin.String
-) : Parcelable
+)
 

@@ -13,18 +13,14 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
  * @param cardSquareId 
  */
-@Parcelize
 
 data class SquareDeleteCustomerCardInput (
     @Json(name = "cardSquareId")
     val cardSquareId: kotlin.String? = null
-) : Parcelable
+)
 

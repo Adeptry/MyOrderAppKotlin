@@ -13,9 +13,6 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
@@ -35,7 +32,6 @@ import kotlinx.parcelize.Parcelize
  * @param lastName 
  * @param organization 
  */
-@Parcelize
 
 data class SquareAddress (
     @Json(name = "addressLine1")
@@ -68,5 +64,5 @@ data class SquareAddress (
     val lastName: kotlin.String? = null,
     @Json(name = "organization")
     val organization: kotlin.String? = null
-) : Parcelable
+)
 

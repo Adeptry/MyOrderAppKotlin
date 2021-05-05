@@ -14,9 +14,6 @@ package com.adeptry.myorderapp.client.models
 import com.adeptry.myorderapp.client.models.MoaItem
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
@@ -28,7 +25,6 @@ import kotlinx.parcelize.Parcelize
  * @param name 
  * @param priceInCents 
  */
-@Parcelize
 
 data class MoaVariation (
     @Json(name = "item")
@@ -45,5 +41,5 @@ data class MoaVariation (
     val name: kotlin.String? = null,
     @Json(name = "priceInCents")
     val priceInCents: java.math.BigDecimal? = null
-) : Parcelable
+)
 

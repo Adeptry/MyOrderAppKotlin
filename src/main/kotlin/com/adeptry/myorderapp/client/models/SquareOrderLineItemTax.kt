@@ -14,9 +14,6 @@ package com.adeptry.myorderapp.client.models
 import com.adeptry.myorderapp.client.models.SquareMoney
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
@@ -29,7 +26,6 @@ import kotlinx.parcelize.Parcelize
  * @param scope 
  * @param autoApplied 
  */
-@Parcelize
 
 data class SquareOrderLineItemTax (
     @Json(name = "uid")
@@ -48,5 +44,5 @@ data class SquareOrderLineItemTax (
     val scope: kotlin.String? = null,
     @Json(name = "autoApplied")
     val autoApplied: kotlin.Boolean? = null
-) : Parcelable
+)
 

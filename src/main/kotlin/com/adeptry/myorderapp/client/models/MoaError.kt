@@ -13,18 +13,14 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
  * @param status 
  */
-@Parcelize
 
 data class MoaError (
     @Json(name = "status")
     val status: java.math.BigDecimal? = null
-) : Parcelable
+)
 

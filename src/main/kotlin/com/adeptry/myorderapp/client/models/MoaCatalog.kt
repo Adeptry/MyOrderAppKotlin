@@ -15,9 +15,6 @@ import com.adeptry.myorderapp.client.models.MoaCategory
 import com.adeptry.myorderapp.client.models.MoaMerchant
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
@@ -27,7 +24,6 @@ import kotlinx.parcelize.Parcelize
  * @param createDate 
  * @param updateDate 
  */
-@Parcelize
 
 data class MoaCatalog (
     @Json(name = "categories")
@@ -40,5 +36,5 @@ data class MoaCatalog (
     val createDate: java.time.OffsetDateTime? = null,
     @Json(name = "updateDate")
     val updateDate: java.time.OffsetDateTime? = null
-) : Parcelable
+)
 

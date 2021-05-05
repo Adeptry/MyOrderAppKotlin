@@ -13,21 +13,17 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
-import android.os.Parcelable
-import kotlinx.parcelize.Parcelize
-
 
 /**
  * 
  * @param paymentSquareId 
  * @param idempotencyKey 
  */
-@Parcelize
 
 data class MoaOrderPayInput (
     @Json(name = "paymentSquareId")
     val paymentSquareId: kotlin.String,
     @Json(name = "idempotencyKey")
     val idempotencyKey: kotlin.String
-) : Parcelable
+)
 
