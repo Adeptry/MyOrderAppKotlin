@@ -4,34 +4,28 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createCardForCurrentCustomer**](CardsApi.md#createCardForCurrentCustomer) | **POST** /v1/customers/current/cards | 
-[**deleteCardForCurrentCustomer**](CardsApi.md#deleteCardForCurrentCustomer) | **DELETE** /v1/customers/current/cards | 
-[**getCardsForCurrentCustomer**](CardsApi.md#getCardsForCurrentCustomer) | **GET** /v1/customers/current/cards | 
+[**createCardForCurrentCustomer**](CardsApi.md#createCardForCurrentCustomer) | **POST** v1/customers/current/cards | 
+[**deleteCardForCurrentCustomer**](CardsApi.md#deleteCardForCurrentCustomer) | **DELETE** v1/customers/current/cards | 
+[**getCardsForCurrentCustomer**](CardsApi.md#getCardsForCurrentCustomer) | **GET** v1/customers/current/cards | 
 
 
-<a name="createCardForCurrentCustomer"></a>
-# **createCardForCurrentCustomer**
-> kotlin.collections.List&lt;SquareCard&gt; createCardForCurrentCustomer(squareCreateCustomerCardInput)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = CardsApi()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(CardsApi::class.java)
 val squareCreateCustomerCardInput : SquareCreateCustomerCardInput =  // SquareCreateCustomerCardInput | 
-try {
-    val result : kotlin.collections.List<SquareCard> = apiInstance.createCardForCurrentCustomer(squareCreateCustomerCardInput)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CardsApi#createCardForCurrentCustomer")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CardsApi#createCardForCurrentCustomer")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : kotlin.collections.List<SquareCard> = webService.createCardForCurrentCustomer(squareCreateCustomerCardInput)
 }
 ```
 
@@ -49,36 +43,30 @@ Name | Type | Description  | Notes
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="deleteCardForCurrentCustomer"></a>
-# **deleteCardForCurrentCustomer**
-> kotlin.collections.List&lt;SquareCard&gt; deleteCardForCurrentCustomer(squareDeleteCustomerCardInput)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = CardsApi()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(CardsApi::class.java)
 val squareDeleteCustomerCardInput : SquareDeleteCustomerCardInput =  // SquareDeleteCustomerCardInput | 
-try {
-    val result : kotlin.collections.List<SquareCard> = apiInstance.deleteCardForCurrentCustomer(squareDeleteCustomerCardInput)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CardsApi#deleteCardForCurrentCustomer")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CardsApi#deleteCardForCurrentCustomer")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : kotlin.collections.List<SquareCard> = webService.deleteCardForCurrentCustomer(squareDeleteCustomerCardInput)
 }
 ```
 
@@ -96,35 +84,29 @@ Name | Type | Description  | Notes
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getCardsForCurrentCustomer"></a>
-# **getCardsForCurrentCustomer**
-> kotlin.collections.List&lt;SquareCard&gt; getCardsForCurrentCustomer()
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = CardsApi()
-try {
-    val result : kotlin.collections.List<SquareCard> = apiInstance.getCardsForCurrentCustomer()
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CardsApi#getCardsForCurrentCustomer")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CardsApi#getCardsForCurrentCustomer")
-    e.printStackTrace()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(CardsApi::class.java)
+
+launch(Dispatchers.IO) {
+    val result : kotlin.collections.List<SquareCard> = webService.getCardsForCurrentCustomer()
 }
 ```
 
@@ -139,7 +121,7 @@ This endpoint does not need any parameter.
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 

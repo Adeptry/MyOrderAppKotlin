@@ -4,32 +4,26 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCurrentCustomersMerchantsCatalog**](CatalogApi.md#getCurrentCustomersMerchantsCatalog) | **GET** /v1/customers/current/merchant/catalog | 
-[**getMerchantCatalog**](CatalogApi.md#getMerchantCatalog) | **GET** /v1/merchants/{moaId}/catalog | 
+[**getCurrentCustomersMerchantsCatalog**](CatalogApi.md#getCurrentCustomersMerchantsCatalog) | **GET** v1/customers/current/merchant/catalog | 
+[**getMerchantCatalog**](CatalogApi.md#getMerchantCatalog) | **GET** v1/merchants/{moaId}/catalog | 
 
 
-<a name="getCurrentCustomersMerchantsCatalog"></a>
-# **getCurrentCustomersMerchantsCatalog**
-> MoaCatalog getCurrentCustomersMerchantsCatalog()
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = CatalogApi()
-try {
-    val result : MoaCatalog = apiInstance.getCurrentCustomersMerchantsCatalog()
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CatalogApi#getCurrentCustomersMerchantsCatalog")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CatalogApi#getCurrentCustomersMerchantsCatalog")
-    e.printStackTrace()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(CatalogApi::class.java)
+
+launch(Dispatchers.IO) {
+    val result : MoaCatalog = webService.getCurrentCustomersMerchantsCatalog()
 }
 ```
 
@@ -44,36 +38,29 @@ This endpoint does not need any parameter.
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getMerchantCatalog"></a>
-# **getMerchantCatalog**
-> MoaCatalog getMerchantCatalog(moaId)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = CatalogApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CatalogApi::class.java)
 val moaId : kotlin.String = moaId_example // kotlin.String | 
-try {
-    val result : MoaCatalog = apiInstance.getMerchantCatalog(moaId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CatalogApi#getMerchantCatalog")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CatalogApi#getMerchantCatalog")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaCatalog = webService.getMerchantCatalog(moaId)
 }
 ```
 

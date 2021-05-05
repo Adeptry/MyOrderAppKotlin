@@ -4,32 +4,26 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCurrentCustomersMerchantsLocations**](LocationsApi.md#getCurrentCustomersMerchantsLocations) | **GET** /v1/customers/current/merchant/locations | 
-[**getMerchantLocations**](LocationsApi.md#getMerchantLocations) | **GET** /v1/merchants/{moaId}/locations | 
+[**getCurrentCustomersMerchantsLocations**](LocationsApi.md#getCurrentCustomersMerchantsLocations) | **GET** v1/customers/current/merchant/locations | 
+[**getMerchantLocations**](LocationsApi.md#getMerchantLocations) | **GET** v1/merchants/{moaId}/locations | 
 
 
-<a name="getCurrentCustomersMerchantsLocations"></a>
-# **getCurrentCustomersMerchantsLocations**
-> kotlin.collections.List&lt;MoaLocation&gt; getCurrentCustomersMerchantsLocations()
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = LocationsApi()
-try {
-    val result : kotlin.collections.List<MoaLocation> = apiInstance.getCurrentCustomersMerchantsLocations()
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling LocationsApi#getCurrentCustomersMerchantsLocations")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling LocationsApi#getCurrentCustomersMerchantsLocations")
-    e.printStackTrace()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(LocationsApi::class.java)
+
+launch(Dispatchers.IO) {
+    val result : kotlin.collections.List<MoaLocation> = webService.getCurrentCustomersMerchantsLocations()
 }
 ```
 
@@ -44,36 +38,29 @@ This endpoint does not need any parameter.
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getMerchantLocations"></a>
-# **getMerchantLocations**
-> kotlin.collections.List&lt;MoaLocation&gt; getMerchantLocations(moaId)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = LocationsApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(LocationsApi::class.java)
 val moaId : kotlin.String = moaId_example // kotlin.String | 
-try {
-    val result : kotlin.collections.List<MoaLocation> = apiInstance.getMerchantLocations(moaId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling LocationsApi#getMerchantLocations")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling LocationsApi#getMerchantLocations")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : kotlin.collections.List<MoaLocation> = webService.getMerchantLocations(moaId)
 }
 ```
 

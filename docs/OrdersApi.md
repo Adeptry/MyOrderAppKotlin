@@ -4,39 +4,33 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addVariationToCurrentCustomersCurrentOrder**](OrdersApi.md#addVariationToCurrentCustomersCurrentOrder) | **PUT** /v1/customers/current/orders/current/variation | 
-[**createOrderForCurrentCustomer**](OrdersApi.md#createOrderForCurrentCustomer) | **POST** /v1/customers/current/orders/current | 
-[**deleteCurrentCustomersCurrentOrder**](OrdersApi.md#deleteCurrentCustomersCurrentOrder) | **DELETE** /v1/customers/current/orders/current | 
-[**getCurrentCustomerOrders**](OrdersApi.md#getCurrentCustomerOrders) | **GET** /v1/customers/current/orders | 
-[**getCurrentCustomersCurrentOrder**](OrdersApi.md#getCurrentCustomersCurrentOrder) | **GET** /v1/customers/current/orders/current | 
-[**getOrderWithId**](OrdersApi.md#getOrderWithId) | **GET** /v1/orders/{moaId} | 
-[**payForCurrentCustomersCurrentOrder**](OrdersApi.md#payForCurrentCustomersCurrentOrder) | **PUT** /v1/customers/current/orders/current/payment | 
-[**removeVariationFromCurrentCustomersCurrentOrder**](OrdersApi.md#removeVariationFromCurrentCustomersCurrentOrder) | **DELETE** /v1/customers/current/orders/current/variation | 
+[**addVariationToCurrentCustomersCurrentOrder**](OrdersApi.md#addVariationToCurrentCustomersCurrentOrder) | **PUT** v1/customers/current/orders/current/variation | 
+[**createOrderForCurrentCustomer**](OrdersApi.md#createOrderForCurrentCustomer) | **POST** v1/customers/current/orders/current | 
+[**deleteCurrentCustomersCurrentOrder**](OrdersApi.md#deleteCurrentCustomersCurrentOrder) | **DELETE** v1/customers/current/orders/current | 
+[**getCurrentCustomerOrders**](OrdersApi.md#getCurrentCustomerOrders) | **GET** v1/customers/current/orders | 
+[**getCurrentCustomersCurrentOrder**](OrdersApi.md#getCurrentCustomersCurrentOrder) | **GET** v1/customers/current/orders/current | 
+[**getOrderWithId**](OrdersApi.md#getOrderWithId) | **GET** v1/orders/{moaId} | 
+[**payForCurrentCustomersCurrentOrder**](OrdersApi.md#payForCurrentCustomersCurrentOrder) | **PUT** v1/customers/current/orders/current/payment | 
+[**removeVariationFromCurrentCustomersCurrentOrder**](OrdersApi.md#removeVariationFromCurrentCustomersCurrentOrder) | **DELETE** v1/customers/current/orders/current/variation | 
 
 
-<a name="addVariationToCurrentCustomersCurrentOrder"></a>
-# **addVariationToCurrentCustomersCurrentOrder**
-> MoaOrder addVariationToCurrentCustomersCurrentOrder(moaOrderAddInput)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = OrdersApi()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(OrdersApi::class.java)
 val moaOrderAddInput : MoaOrderAddInput =  // MoaOrderAddInput | 
-try {
-    val result : MoaOrder = apiInstance.addVariationToCurrentCustomersCurrentOrder(moaOrderAddInput)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling OrdersApi#addVariationToCurrentCustomersCurrentOrder")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling OrdersApi#addVariationToCurrentCustomersCurrentOrder")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaOrder = webService.addVariationToCurrentCustomersCurrentOrder(moaOrderAddInput)
 }
 ```
 
@@ -54,36 +48,30 @@ Name | Type | Description  | Notes
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="createOrderForCurrentCustomer"></a>
-# **createOrderForCurrentCustomer**
-> MoaCustomer createOrderForCurrentCustomer(moaOrderCreateInput)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = OrdersApi()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(OrdersApi::class.java)
 val moaOrderCreateInput : MoaOrderCreateInput =  // MoaOrderCreateInput | 
-try {
-    val result : MoaCustomer = apiInstance.createOrderForCurrentCustomer(moaOrderCreateInput)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling OrdersApi#createOrderForCurrentCustomer")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling OrdersApi#createOrderForCurrentCustomer")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaCustomer = webService.createOrderForCurrentCustomer(moaOrderCreateInput)
 }
 ```
 
@@ -101,35 +89,29 @@ Name | Type | Description  | Notes
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="deleteCurrentCustomersCurrentOrder"></a>
-# **deleteCurrentCustomersCurrentOrder**
-> MoaCustomer deleteCurrentCustomersCurrentOrder()
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = OrdersApi()
-try {
-    val result : MoaCustomer = apiInstance.deleteCurrentCustomersCurrentOrder()
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling OrdersApi#deleteCurrentCustomersCurrentOrder")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling OrdersApi#deleteCurrentCustomersCurrentOrder")
-    e.printStackTrace()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(OrdersApi::class.java)
+
+launch(Dispatchers.IO) {
+    val result : MoaCustomer = webService.deleteCurrentCustomersCurrentOrder()
 }
 ```
 
@@ -144,37 +126,31 @@ This endpoint does not need any parameter.
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getCurrentCustomerOrders"></a>
-# **getCurrentCustomerOrders**
-> MoaOrderPaginatedResponse getCurrentCustomerOrders(page, limit)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = OrdersApi()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(OrdersApi::class.java)
 val page : java.math.BigDecimal = 8.14 // java.math.BigDecimal | 
 val limit : java.math.BigDecimal = 8.14 // java.math.BigDecimal | 
-try {
-    val result : MoaOrderPaginatedResponse = apiInstance.getCurrentCustomerOrders(page, limit)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling OrdersApi#getCurrentCustomerOrders")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling OrdersApi#getCurrentCustomerOrders")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaOrderPaginatedResponse = webService.getCurrentCustomerOrders(page, limit)
 }
 ```
 
@@ -193,35 +169,29 @@ Name | Type | Description  | Notes
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getCurrentCustomersCurrentOrder"></a>
-# **getCurrentCustomersCurrentOrder**
-> MoaOrder getCurrentCustomersCurrentOrder()
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = OrdersApi()
-try {
-    val result : MoaOrder = apiInstance.getCurrentCustomersCurrentOrder()
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling OrdersApi#getCurrentCustomersCurrentOrder")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling OrdersApi#getCurrentCustomersCurrentOrder")
-    e.printStackTrace()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(OrdersApi::class.java)
+
+launch(Dispatchers.IO) {
+    val result : MoaOrder = webService.getCurrentCustomersCurrentOrder()
 }
 ```
 
@@ -236,36 +206,30 @@ This endpoint does not need any parameter.
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="getOrderWithId"></a>
-# **getOrderWithId**
-> MoaOrder getOrderWithId(moaId)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = OrdersApi()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(OrdersApi::class.java)
 val moaId : kotlin.String = moaId_example // kotlin.String | 
-try {
-    val result : MoaOrder = apiInstance.getOrderWithId(moaId)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling OrdersApi#getOrderWithId")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling OrdersApi#getOrderWithId")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaOrder = webService.getOrderWithId(moaId)
 }
 ```
 
@@ -283,36 +247,30 @@ Name | Type | Description  | Notes
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="payForCurrentCustomersCurrentOrder"></a>
-# **payForCurrentCustomersCurrentOrder**
-> MoaOrder payForCurrentCustomersCurrentOrder(moaOrderPayInput)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = OrdersApi()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(OrdersApi::class.java)
 val moaOrderPayInput : MoaOrderPayInput =  // MoaOrderPayInput | 
-try {
-    val result : MoaOrder = apiInstance.payForCurrentCustomersCurrentOrder(moaOrderPayInput)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling OrdersApi#payForCurrentCustomersCurrentOrder")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling OrdersApi#payForCurrentCustomersCurrentOrder")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaOrder = webService.payForCurrentCustomersCurrentOrder(moaOrderPayInput)
 }
 ```
 
@@ -330,36 +288,30 @@ Name | Type | Description  | Notes
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="removeVariationFromCurrentCustomersCurrentOrder"></a>
-# **removeVariationFromCurrentCustomersCurrentOrder**
-> MoaOrder removeVariationFromCurrentCustomersCurrentOrder(moaOrderRemoveInput)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = OrdersApi()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(OrdersApi::class.java)
 val moaOrderRemoveInput : MoaOrderRemoveInput =  // MoaOrderRemoveInput | 
-try {
-    val result : MoaOrder = apiInstance.removeVariationFromCurrentCustomersCurrentOrder(moaOrderRemoveInput)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling OrdersApi#removeVariationFromCurrentCustomersCurrentOrder")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling OrdersApi#removeVariationFromCurrentCustomersCurrentOrder")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaOrder = webService.removeVariationFromCurrentCustomersCurrentOrder(moaOrderRemoveInput)
 }
 ```
 
@@ -377,7 +329,7 @@ Name | Type | Description  | Notes
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 

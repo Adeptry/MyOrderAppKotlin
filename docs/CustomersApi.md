@@ -4,34 +4,27 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createCustomer**](CustomersApi.md#createCustomer) | **POST** /v1/customers | 
-[**getCurrentCustomer**](CustomersApi.md#getCurrentCustomer) | **GET** /v1/customers/current | 
-[**updateCurrentCustomer**](CustomersApi.md#updateCurrentCustomer) | **PATCH** /v1/customers/current | 
+[**createCustomer**](CustomersApi.md#createCustomer) | **POST** v1/customers | 
+[**getCurrentCustomer**](CustomersApi.md#getCurrentCustomer) | **GET** v1/customers/current | 
+[**updateCurrentCustomer**](CustomersApi.md#updateCurrentCustomer) | **PATCH** v1/customers/current | 
 
 
-<a name="createCustomer"></a>
-# **createCustomer**
-> MoaCustomer createCustomer(moaCustomerCreateInput)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = CustomersApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(CustomersApi::class.java)
 val moaCustomerCreateInput : MoaCustomerCreateInput =  // MoaCustomerCreateInput | 
-try {
-    val result : MoaCustomer = apiInstance.createCustomer(moaCustomerCreateInput)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CustomersApi#createCustomer")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CustomersApi#createCustomer")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaCustomer = webService.createCustomer(moaCustomerCreateInput)
 }
 ```
 
@@ -54,28 +47,22 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getCurrentCustomer"></a>
-# **getCurrentCustomer**
-> MoaCustomer getCurrentCustomer()
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = CustomersApi()
-try {
-    val result : MoaCustomer = apiInstance.getCurrentCustomer()
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CustomersApi#getCurrentCustomer")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CustomersApi#getCurrentCustomer")
-    e.printStackTrace()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(CustomersApi::class.java)
+
+launch(Dispatchers.IO) {
+    val result : MoaCustomer = webService.getCurrentCustomer()
 }
 ```
 
@@ -90,36 +77,30 @@ This endpoint does not need any parameter.
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="updateCurrentCustomer"></a>
-# **updateCurrentCustomer**
-> MoaCustomer updateCurrentCustomer(moaCustomerUpdateInput)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = CustomersApi()
+val apiClient = ApiClient()
+apiClient.setBearerToken("TOKEN")
+val webService = apiClient.createWebservice(CustomersApi::class.java)
 val moaCustomerUpdateInput : MoaCustomerUpdateInput =  // MoaCustomerUpdateInput | 
-try {
-    val result : MoaCustomer = apiInstance.updateCurrentCustomer(moaCustomerUpdateInput)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling CustomersApi#updateCurrentCustomer")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling CustomersApi#updateCurrentCustomer")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaCustomer = webService.updateCurrentCustomer(moaCustomerUpdateInput)
 }
 ```
 
@@ -137,7 +118,7 @@ Name | Type | Description  | Notes
 
 
 Configure bearer:
-    ApiClient.accessToken = ""
+    ApiClient().setBearerToken("TOKEN")
 
 ### HTTP request headers
 

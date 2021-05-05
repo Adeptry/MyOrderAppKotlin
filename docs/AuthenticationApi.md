@@ -4,32 +4,25 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**authenticate**](AuthenticationApi.md#authenticate) | **POST** /v1/authentication | 
+[**authenticate**](AuthenticationApi.md#authenticate) | **POST** v1/authentication | 
 
 
-<a name="authenticate"></a>
-# **authenticate**
-> MoaAuthenticationOutput authenticate(moaAuthenticationInput)
 
 
 
 ### Example
 ```kotlin
 // Import classes:
-//import com.adeptry.moaclient.infrastructure.*
-//import com.adeptry.moaclient.models.*
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
 
-val apiInstance = AuthenticationApi()
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(AuthenticationApi::class.java)
 val moaAuthenticationInput : MoaAuthenticationInput =  // MoaAuthenticationInput | 
-try {
-    val result : MoaAuthenticationOutput = apiInstance.authenticate(moaAuthenticationInput)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling AuthenticationApi#authenticate")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling AuthenticationApi#authenticate")
-    e.printStackTrace()
+
+launch(Dispatchers.IO) {
+    val result : MoaAuthenticationOutput = webService.authenticate(moaAuthenticationInput)
 }
 ```
 
