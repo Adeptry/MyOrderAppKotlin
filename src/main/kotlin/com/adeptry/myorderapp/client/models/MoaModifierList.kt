@@ -38,9 +38,9 @@ data class MoaModifierList (
     @Json(name = "moaId")
     val moaId: kotlin.String? = null,
     @Json(name = "createDate")
-    val createDate: java.time.OffsetDateTime? = null,
+    val createDate: org.threeten.bp.OffsetDateTime? = null,
     @Json(name = "updateDate")
-    val updateDate: java.time.OffsetDateTime? = null,
+    val updateDate: org.threeten.bp.OffsetDateTime? = null,
     @Json(name = "squareId")
     val squareId: kotlin.String? = null,
     @Json(name = "minSelectedModifiers")

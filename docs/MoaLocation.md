@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **moaId** | **kotlin.String** |  |  [optional]
-**createDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
-**updateDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**createDate** | [**org.threeten.bp.OffsetDateTime**](org.threeten.bp.OffsetDateTime.md) |  |  [optional]
+**updateDate** | [**org.threeten.bp.OffsetDateTime**](org.threeten.bp.OffsetDateTime.md) |  |  [optional]
 **name** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
 **phoneNumber** | **kotlin.String** |  |  [optional]

@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **catalog** | [**MoaCatalog**](MoaCatalog.md) |  |  [optional]
 **moaId** | **kotlin.String** |  |  [optional]
-**createDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
-**updateDate** | [**java.time.OffsetDateTime**](java.time.OffsetDateTime.md) |  |  [optional]
+**createDate** | [**org.threeten.bp.OffsetDateTime**](org.threeten.bp.OffsetDateTime.md) |  |  [optional]
+**updateDate** | [**org.threeten.bp.OffsetDateTime**](org.threeten.bp.OffsetDateTime.md) |  |  [optional]
 **email** | **kotlin.String** |  |  [optional]
 **firstName** | **kotlin.String** |  |  [optional]
 **lastName** | **kotlin.String** |  |  [optional]
