@@ -26,7 +26,7 @@ data class MoaOrderAddInput (
     @Json(name = "variationMoaId")
     val variationMoaId: kotlin.String,
     @Json(name = "quantity")
-    val quantity: java.math.BigDecimal,
+    val quantity: Double,
     @Json(name = "idempotencyKey")
     val idempotencyKey: kotlin.String,
     @Json(name = "modifiersMoaIds")

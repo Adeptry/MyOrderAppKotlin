@@ -66,7 +66,7 @@ interface OrdersApi {
      * @return [MoaOrderPaginatedResponse]
      */
     @GET("v1/customers/current/orders")
-    suspend fun getCurrentCustomerOrders(@Query("page") page: java.math.BigDecimal? = null, @Query("limit") limit: java.math.BigDecimal? = null): Response<MoaOrderPaginatedResponse>
+    suspend fun getCurrentCustomerOrders(@Query("page") page: Double? = null, @Query("limit") limit: Double? = null): Response<MoaOrderPaginatedResponse>
 
     /**
      * 

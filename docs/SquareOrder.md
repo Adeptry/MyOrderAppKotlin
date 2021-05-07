@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **updatedAt** | **kotlin.String** |  |  [optional]
 **closedAt** | **kotlin.String** |  |  [optional]
 **state** | **kotlin.String** |  |  [optional]
-**version** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
+**version** | **Double** |  |  [optional]
 **totalMoney** | [**SquareMoney**](SquareMoney.md) |  |  [optional]
 **totalTaxMoney** | [**SquareMoney**](SquareMoney.md) |  |  [optional]
 **totalDiscountMoney** | [**SquareMoney**](SquareMoney.md) |  |  [optional]

@@ -50,7 +50,7 @@ data class MoaItem (
     @Json(name = "name")
     val name: kotlin.String? = null,
     @Json(name = "priceInCents")
-    val priceInCents: java.math.BigDecimal? = null,
+    val priceInCents: Double? = null,
     @Json(name = "description")
     val description: kotlin.String? = null,
     @Json(name = "categoryMoaId")

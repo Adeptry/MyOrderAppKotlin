@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **kotlin.String** |  |  [optional]
-**expMonth** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
-**expYear** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
+**expMonth** | **Double** |  |  [optional]
+**expYear** | **Double** |  |  [optional]
 **cardBrand** | **kotlin.String** |  |  [optional]
 **last4** | **kotlin.String** |  |  [optional]
 **cardholderName** | **kotlin.String** |  |  [optional]

@@ -40,6 +40,6 @@ data class MoaVariation (
     @Json(name = "name")
     val name: kotlin.String? = null,
     @Json(name = "priceInCents")
-    val priceInCents: java.math.BigDecimal? = null
+    val priceInCents: Double? = null
 )
 

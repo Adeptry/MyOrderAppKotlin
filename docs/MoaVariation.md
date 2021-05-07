@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **updateDate** | [**org.threeten.bp.OffsetDateTime**](org.threeten.bp.OffsetDateTime.md) |  |  [optional]
 **squareId** | **kotlin.String** |  |  [optional]
 **name** | **kotlin.String** |  |  [optional]
-**priceInCents** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
+**priceInCents** | **Double** |  |  [optional]
 
 
 

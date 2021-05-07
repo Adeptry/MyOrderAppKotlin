@@ -22,7 +22,7 @@ import com.squareup.moshi.Json
 
 data class SquareMoney (
     @Json(name = "amount")
-    val amount: java.math.BigDecimal? = null,
+    val amount: Double? = null,
     @Json(name = "currency")
     val currency: kotlin.String? = null
 )

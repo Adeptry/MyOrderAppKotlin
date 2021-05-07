@@ -44,9 +44,9 @@ data class MoaLocation (
     @Json(name = "phoneNumber")
     val phoneNumber: kotlin.String? = null,
     @Json(name = "latitude")
-    val latitude: java.math.BigDecimal? = null,
+    val latitude: Double? = null,
     @Json(name = "longitude")
-    val longitude: java.math.BigDecimal? = null,
+    val longitude: Double? = null,
     @Json(name = "status")
     val status: kotlin.String? = null,
     @Json(name = "merchantMoaId")

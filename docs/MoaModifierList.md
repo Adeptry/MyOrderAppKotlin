@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **createDate** | [**org.threeten.bp.OffsetDateTime**](org.threeten.bp.OffsetDateTime.md) |  |  [optional]
 **updateDate** | [**org.threeten.bp.OffsetDateTime**](org.threeten.bp.OffsetDateTime.md) |  |  [optional]
 **squareId** | **kotlin.String** |  |  [optional]
-**minSelectedModifiers** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
-**maxSelectedModifiers** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
+**minSelectedModifiers** | **Double** |  |  [optional]
+**maxSelectedModifiers** | **Double** |  |  [optional]
 **enabled** | **kotlin.Boolean** |  |  [optional]
 **name** | **kotlin.String** |  |  [optional]
 

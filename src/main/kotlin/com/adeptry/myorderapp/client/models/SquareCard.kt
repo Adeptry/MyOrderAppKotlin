@@ -34,9 +34,9 @@ data class SquareCard (
     @Json(name = "id")
     val id: kotlin.String? = null,
     @Json(name = "expMonth")
-    val expMonth: java.math.BigDecimal? = null,
+    val expMonth: Double? = null,
     @Json(name = "expYear")
-    val expYear: java.math.BigDecimal? = null,
+    val expYear: Double? = null,
     @Json(name = "cardBrand")
     val cardBrand: kotlin.String? = null,
     @Json(name = "last4")

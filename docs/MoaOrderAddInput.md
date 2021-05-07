@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **variationMoaId** | **kotlin.String** |  | 
-**quantity** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  | 
+**quantity** | **Double** |  | 
 **idempotencyKey** | **kotlin.String** |  | 
 **modifiersMoaIds** | **kotlin.collections.List&lt;kotlin.String&gt;** |  |  [optional]
 

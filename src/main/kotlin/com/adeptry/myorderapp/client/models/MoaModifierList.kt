@@ -44,9 +44,9 @@ data class MoaModifierList (
     @Json(name = "squareId")
     val squareId: kotlin.String? = null,
     @Json(name = "minSelectedModifiers")
-    val minSelectedModifiers: java.math.BigDecimal? = null,
+    val minSelectedModifiers: Double? = null,
     @Json(name = "maxSelectedModifiers")
-    val maxSelectedModifiers: java.math.BigDecimal? = null,
+    val maxSelectedModifiers: Double? = null,
     @Json(name = "enabled")
     val enabled: kotlin.Boolean? = null,
     @Json(name = "name")

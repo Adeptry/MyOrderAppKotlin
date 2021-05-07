@@ -90,7 +90,7 @@ data class SquareOrder (
     @Json(name = "state")
     val state: kotlin.String? = null,
     @Json(name = "version")
-    val version: java.math.BigDecimal? = null,
+    val version: Double? = null,
     @Json(name = "totalMoney")
     val totalMoney: SquareMoney? = null,
     @Json(name = "totalTaxMoney")

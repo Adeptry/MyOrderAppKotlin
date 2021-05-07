@@ -21,6 +21,6 @@ import com.squareup.moshi.Json
 
 data class MoaError (
     @Json(name = "status")
-    val status: java.math.BigDecimal? = null
+    val status: Double? = null
 )
 

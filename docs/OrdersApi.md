@@ -146,8 +146,8 @@ Configure bearer:
 val apiClient = ApiClient()
 apiClient.setBearerToken("TOKEN")
 val webService = apiClient.createWebservice(OrdersApi::class.java)
-val page : java.math.BigDecimal = 8.14 // java.math.BigDecimal | 
-val limit : java.math.BigDecimal = 8.14 // java.math.BigDecimal | 
+val page : Double = 8.14 // Double | 
+val limit : Double = 8.14 // Double | 
 
 launch(Dispatchers.IO) {
     val result : MoaOrderPaginatedResponse = webService.getCurrentCustomerOrders(page, limit)
@@ -158,8 +158,8 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **java.math.BigDecimal**|  | [optional]
- **limit** | **java.math.BigDecimal**|  | [optional]
+ **page** | **Double**|  | [optional]
+ **limit** | **Double**|  | [optional]
 
 ### Return type
 

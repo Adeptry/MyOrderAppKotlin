@@ -26,8 +26,8 @@ data class MoaOrderPaginatedResponse (
     @Json(name = "entities")
     val entities: kotlin.collections.List<MoaOrder>? = null,
     @Json(name = "count")
-    val count: java.math.BigDecimal? = null,
+    val count: Double? = null,
     @Json(name = "pages")
-    val pages: java.math.BigDecimal? = null
+    val pages: Double? = null
 )
 
