@@ -14,6 +14,7 @@ package com.adeptry.myorderapp.client.models
 import com.adeptry.myorderapp.client.models.MoaOrder
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -29,5 +30,10 @@ data class MoaOrderPaginatedResponse (
     val count: Double? = null,
     @Json(name = "pages")
     val pages: Double? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

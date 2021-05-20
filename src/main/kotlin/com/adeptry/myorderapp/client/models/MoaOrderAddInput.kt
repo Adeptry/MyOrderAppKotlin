@@ -13,6 +13,7 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -31,5 +32,10 @@ data class MoaOrderAddInput (
     val idempotencyKey: kotlin.String,
     @Json(name = "modifiersMoaIds")
     val modifiersMoaIds: kotlin.collections.List<kotlin.String>? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

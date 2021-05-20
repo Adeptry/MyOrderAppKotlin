@@ -15,6 +15,7 @@ import com.adeptry.myorderapp.client.models.MoaCategory
 import com.adeptry.myorderapp.client.models.MoaMerchant
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -36,5 +37,10 @@ data class MoaCatalog (
     val createDate: org.threeten.bp.OffsetDateTime? = null,
     @Json(name = "updateDate")
     val updateDate: org.threeten.bp.OffsetDateTime? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

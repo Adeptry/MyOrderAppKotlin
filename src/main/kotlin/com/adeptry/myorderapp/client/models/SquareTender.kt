@@ -14,6 +14,7 @@ package com.adeptry.myorderapp.client.models
 import com.adeptry.myorderapp.client.models.SquareMoney
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -53,5 +54,10 @@ data class SquareTender (
     val type: kotlin.String? = null,
     @Json(name = "paymentId")
     val paymentId: kotlin.String? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

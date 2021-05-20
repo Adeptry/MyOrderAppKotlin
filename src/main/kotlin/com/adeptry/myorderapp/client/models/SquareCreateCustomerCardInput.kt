@@ -14,6 +14,7 @@ package com.adeptry.myorderapp.client.models
 import com.adeptry.myorderapp.client.models.SquareAddress
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -29,5 +30,10 @@ data class SquareCreateCustomerCardInput (
     val billingAddress: SquareAddress? = null,
     @Json(name = "cardholderName")
     val cardholderName: kotlin.String? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

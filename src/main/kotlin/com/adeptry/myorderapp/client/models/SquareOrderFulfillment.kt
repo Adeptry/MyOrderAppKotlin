@@ -13,6 +13,7 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -28,5 +29,10 @@ data class SquareOrderFulfillment (
     val type: kotlin.String? = null,
     @Json(name = "state")
     val state: kotlin.String? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

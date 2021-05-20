@@ -13,6 +13,7 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -22,5 +23,10 @@ import com.squareup.moshi.Json
 data class MoaOrderCreateInput (
     @Json(name = "locationMoaId")
     val locationMoaId: kotlin.String
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

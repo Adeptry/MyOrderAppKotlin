@@ -13,6 +13,7 @@ package com.adeptry.myorderapp.client.models
 
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -25,7 +26,10 @@ data class MoaAuthenticationOutput (
     val accessToken: kotlin.String? = null,
     @Json(name = "userType")
     val userType: MoaAuthenticationOutput.UserType? = null
-) {
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
 
     /**
      * 

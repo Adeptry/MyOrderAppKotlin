@@ -14,6 +14,7 @@ package com.adeptry.myorderapp.client.models
 import com.adeptry.myorderapp.client.models.MoaCatalog
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -44,5 +45,10 @@ data class MoaMerchant (
     val lastName: kotlin.String? = null,
     @Json(name = "phoneNumber")
     val phoneNumber: kotlin.String? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

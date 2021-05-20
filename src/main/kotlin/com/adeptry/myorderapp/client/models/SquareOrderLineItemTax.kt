@@ -14,6 +14,7 @@ package com.adeptry.myorderapp.client.models
 import com.adeptry.myorderapp.client.models.SquareMoney
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -44,5 +45,10 @@ data class SquareOrderLineItemTax (
     val scope: kotlin.String? = null,
     @Json(name = "autoApplied")
     val autoApplied: kotlin.Boolean? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

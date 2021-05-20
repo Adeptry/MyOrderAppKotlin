@@ -15,6 +15,7 @@ import com.adeptry.myorderapp.client.models.SquareMoney
 import com.adeptry.myorderapp.client.models.SquareOrderLineItemModifier
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -60,5 +61,10 @@ data class SquareOrderLineItem (
     val totalDiscountMoney: SquareMoney? = null,
     @Json(name = "totalMoney")
     val totalMoney: SquareMoney? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

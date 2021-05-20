@@ -18,6 +18,7 @@ import com.adeptry.myorderapp.client.models.SquareOrder
 import com.adeptry.myorderapp.client.models.SquarePayment
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -63,5 +64,10 @@ data class MoaOrder (
     val locationMoaId: kotlin.String? = null,
     @Json(name = "location")
     val location: MoaLocation? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 

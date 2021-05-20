@@ -14,6 +14,7 @@ package com.adeptry.myorderapp.client.models
 import com.adeptry.myorderapp.client.models.MoaModifierList
 
 import com.squareup.moshi.Json
+import java.io.Serializable
 
 /**
  * 
@@ -44,5 +45,10 @@ data class MoaModifier (
     val priceInCents: Double? = null,
     @Json(name = "ordinal")
     val ordinal: Double? = null
-)
+) : Serializable {
+    companion object {
+        private const val serialVersionUID: Long = 123
+    }
+
+}
 
