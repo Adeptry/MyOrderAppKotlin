@@ -17,18 +17,18 @@ import java.io.Serializable
 
 /**
  * 
- * @param password 
  * @param email 
  * @param phoneNumber 
+ * @param password 
  */
 
 data class MoaCustomerUpdateInput (
-    @Json(name = "password")
-    val password: kotlin.String,
     @Json(name = "email")
     val email: kotlin.String? = null,
     @Json(name = "phoneNumber")
-    val phoneNumber: kotlin.String? = null
+    val phoneNumber: kotlin.String? = null,
+    @Json(name = "password")
+    val password: kotlin.String? = null
 ) : Serializable {
     companion object {
         private const val serialVersionUID: Long = 123

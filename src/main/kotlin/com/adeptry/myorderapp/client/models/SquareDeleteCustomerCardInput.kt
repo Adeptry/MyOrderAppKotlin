@@ -22,7 +22,7 @@ import java.io.Serializable
 
 data class SquareDeleteCustomerCardInput (
     @Json(name = "cardSquareId")
-    val cardSquareId: kotlin.String? = null
+    val cardSquareId: kotlin.String
 ) : Serializable {
     companion object {
         private const val serialVersionUID: Long = 123
