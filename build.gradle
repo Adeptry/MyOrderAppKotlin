@@ -1,5 +1,5 @@
 group 'com.adeptry.myorderapp'
-version '0.0.8'
+version '0.0.9'
 
 wrapper {
     gradleVersion = '6.8.3'

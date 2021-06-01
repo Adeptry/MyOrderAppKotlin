@@ -29,6 +29,7 @@ import java.io.Serializable
  * @param maxSelectedModifiers 
  * @param enabled 
  * @param name 
+ * @param selectionType 
  */
 
 data class MoaModifierList (
@@ -51,11 +52,21 @@ data class MoaModifierList (
     @Json(name = "enabled")
     val enabled: kotlin.Boolean? = null,
     @Json(name = "name")
-    val name: kotlin.String? = null
+    val name: kotlin.String? = null,
+    @Json(name = "selectionType")
+    val selectionType: MoaModifierList.SelectionType? = null
 ) : Serializable {
     companion object {
         private const val serialVersionUID: Long = 123
     }
 
+    /**
+     * 
+     * Values: SINGLE,MULTIPLE
+     */
+    enum class SelectionType(val value: kotlin.String) {
+        @Json(name = "SINGLE") SINGLE("SINGLE"),
+        @Json(name = "MULTIPLE") MULTIPLE("MULTIPLE");
+    }
 }
 

@@ -14,6 +14,14 @@ Name | Type | Description | Notes
 **maxSelectedModifiers** | **Double** |  |  [optional]
 **enabled** | **kotlin.Boolean** |  |  [optional]
 **name** | **kotlin.String** |  |  [optional]
+**selectionType** | [**inline**](#SelectionTypeEnum) |  |  [optional]
+
+
+<a name="SelectionTypeEnum"></a>
+## Enum: selectionType
+Name | Value
+---- | -----
+selectionType | SINGLE, MULTIPLE
 
 
 
