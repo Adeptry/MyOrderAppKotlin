@@ -12,7 +12,6 @@ import com.adeptry.myorderapp.client.models.MoaOrderAddInput
 import com.adeptry.myorderapp.client.models.MoaOrderCreateInput
 import com.adeptry.myorderapp.client.models.MoaOrderPaginatedResponse
 import com.adeptry.myorderapp.client.models.MoaOrderPayInput
-import com.adeptry.myorderapp.client.models.MoaOrderRemoveInput
 
 interface OrdersApi {
     /**
@@ -115,10 +114,10 @@ interface OrdersApi {
      *  - 200: 
      *  - 401: You need to be authenticated to access this endpoint.
      * 
-     * @param moaOrderRemoveInput  
+     * @param orderVariationUid  
      * @return [MoaOrder]
      */
-    @DELETE("v1/customers/current/orders/current/variation")
-    suspend fun removeVariationFromCurrentCustomersCurrentOrder(@Body moaOrderRemoveInput: MoaOrderRemoveInput): Response<MoaOrder>
+    @DELETE("v1/customers/current/orders/current/variation/{orderVariationUid}")
+    suspend fun removeVariationFromCurrentCustomersCurrentOrder(@Path("orderVariationUid") orderVariationUid: kotlin.String): Response<MoaOrder>
 
 }

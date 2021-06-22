@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCardForCurrentCustomer**](CardsApi.md#createCardForCurrentCustomer) | **POST** v1/customers/current/cards | 
-[**deleteCardForCurrentCustomer**](CardsApi.md#deleteCardForCurrentCustomer) | **DELETE** v1/customers/current/cards | 
+[**deleteCardForCurrentCustomer**](CardsApi.md#deleteCardForCurrentCustomer) | **DELETE** v1/customers/current/cards/{squareId} | 
 [**getCardsForCurrentCustomer**](CardsApi.md#getCardsForCurrentCustomer) | **GET** v1/customers/current/cards | 
 
 
@@ -63,10 +63,10 @@ Configure bearer:
 val apiClient = ApiClient()
 apiClient.setBearerToken("TOKEN")
 val webService = apiClient.createWebservice(CardsApi::class.java)
-val squareDeleteCustomerCardInput : SquareDeleteCustomerCardInput =  // SquareDeleteCustomerCardInput | 
+val squareId : kotlin.String = squareId_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.collections.List<SquareCard> = webService.deleteCardForCurrentCustomer(squareDeleteCustomerCardInput)
+    val result : kotlin.collections.List<SquareCard> = webService.deleteCardForCurrentCustomer(squareId)
 }
 ```
 
@@ -74,7 +74,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **squareDeleteCustomerCardInput** | [**SquareDeleteCustomerCardInput**](SquareDeleteCustomerCardInput.md)|  |
+ **squareId** | **kotlin.String**|  |
 
 ### Return type
 
@@ -88,7 +88,7 @@ Configure bearer:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 

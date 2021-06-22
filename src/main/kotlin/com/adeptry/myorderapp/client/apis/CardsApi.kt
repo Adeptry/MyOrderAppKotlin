@@ -8,7 +8,6 @@ import okhttp3.RequestBody
 import com.adeptry.myorderapp.client.models.MoaError
 import com.adeptry.myorderapp.client.models.SquareCard
 import com.adeptry.myorderapp.client.models.SquareCreateCustomerCardInput
-import com.adeptry.myorderapp.client.models.SquareDeleteCustomerCardInput
 
 interface CardsApi {
     /**
@@ -32,11 +31,11 @@ interface CardsApi {
      *  - 200: New list of cards
      *  - 401: You need to be authenticated to access this endpoint.
      * 
-     * @param squareDeleteCustomerCardInput  
+     * @param squareId  
      * @return [kotlin.collections.List<SquareCard>]
      */
-    @DELETE("v1/customers/current/cards")
-    suspend fun deleteCardForCurrentCustomer(@Body squareDeleteCustomerCardInput: SquareDeleteCustomerCardInput): Response<kotlin.collections.List<SquareCard>>
+    @DELETE("v1/customers/current/cards/{squareId}")
+    suspend fun deleteCardForCurrentCustomer(@Path("squareId") squareId: kotlin.String): Response<kotlin.collections.List<SquareCard>>
 
     /**
      * 

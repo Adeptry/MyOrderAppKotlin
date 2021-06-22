@@ -37,7 +37,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthenticationApi* | [**authenticate**](docs/AuthenticationApi.md#authenticate) | **POST** v1/authentication | 
 *CardsApi* | [**createCardForCurrentCustomer**](docs/CardsApi.md#createcardforcurrentcustomer) | **POST** v1/customers/current/cards | 
-*CardsApi* | [**deleteCardForCurrentCustomer**](docs/CardsApi.md#deletecardforcurrentcustomer) | **DELETE** v1/customers/current/cards | 
+*CardsApi* | [**deleteCardForCurrentCustomer**](docs/CardsApi.md#deletecardforcurrentcustomer) | **DELETE** v1/customers/current/cards/{squareId} | 
 *CardsApi* | [**getCardsForCurrentCustomer**](docs/CardsApi.md#getcardsforcurrentcustomer) | **GET** v1/customers/current/cards | 
 *CatalogApi* | [**getCurrentCustomersMerchantsCatalog**](docs/CatalogApi.md#getcurrentcustomersmerchantscatalog) | **GET** v1/customers/current/merchant/catalog | 
 *CatalogApi* | [**getMerchantCatalog**](docs/CatalogApi.md#getmerchantcatalog) | **GET** v1/merchants/{moaId}/catalog | 
@@ -53,7 +53,7 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**getCurrentCustomersCurrentOrder**](docs/OrdersApi.md#getcurrentcustomerscurrentorder) | **GET** v1/customers/current/orders/current | 
 *OrdersApi* | [**getOrderWithId**](docs/OrdersApi.md#getorderwithid) | **GET** v1/orders/{moaId} | 
 *OrdersApi* | [**payForCurrentCustomersCurrentOrder**](docs/OrdersApi.md#payforcurrentcustomerscurrentorder) | **PUT** v1/customers/current/orders/current/payment | 
-*OrdersApi* | [**removeVariationFromCurrentCustomersCurrentOrder**](docs/OrdersApi.md#removevariationfromcurrentcustomerscurrentorder) | **DELETE** v1/customers/current/orders/current/variation | 
+*OrdersApi* | [**removeVariationFromCurrentCustomersCurrentOrder**](docs/OrdersApi.md#removevariationfromcurrentcustomerscurrentorder) | **DELETE** v1/customers/current/orders/current/variation/{orderVariationUid} | 
 
 
 <a name="documentation-for-models"></a>
@@ -77,12 +77,10 @@ Class | Method | HTTP request | Description
  - [com.adeptry.myorderapp.client.models.MoaOrderCreateInput](docs/MoaOrderCreateInput.md)
  - [com.adeptry.myorderapp.client.models.MoaOrderPaginatedResponse](docs/MoaOrderPaginatedResponse.md)
  - [com.adeptry.myorderapp.client.models.MoaOrderPayInput](docs/MoaOrderPayInput.md)
- - [com.adeptry.myorderapp.client.models.MoaOrderRemoveInput](docs/MoaOrderRemoveInput.md)
  - [com.adeptry.myorderapp.client.models.MoaVariation](docs/MoaVariation.md)
  - [com.adeptry.myorderapp.client.models.SquareAddress](docs/SquareAddress.md)
  - [com.adeptry.myorderapp.client.models.SquareCard](docs/SquareCard.md)
  - [com.adeptry.myorderapp.client.models.SquareCreateCustomerCardInput](docs/SquareCreateCustomerCardInput.md)
- - [com.adeptry.myorderapp.client.models.SquareDeleteCustomerCardInput](docs/SquareDeleteCustomerCardInput.md)
  - [com.adeptry.myorderapp.client.models.SquareMoney](docs/SquareMoney.md)
  - [com.adeptry.myorderapp.client.models.SquareOrder](docs/SquareOrder.md)
  - [com.adeptry.myorderapp.client.models.SquareOrderFulfillment](docs/SquareOrderFulfillment.md)

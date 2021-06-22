@@ -1,3 +1,4 @@
+.openapi-generator-ignore
 README.md
 build.gradle
 docs/AuthenticationApi.md
@@ -23,13 +24,11 @@ docs/MoaOrderAddInput.md
 docs/MoaOrderCreateInput.md
 docs/MoaOrderPaginatedResponse.md
 docs/MoaOrderPayInput.md
-docs/MoaOrderRemoveInput.md
 docs/MoaVariation.md
 docs/OrdersApi.md
 docs/SquareAddress.md
 docs/SquareCard.md
 docs/SquareCreateCustomerCardInput.md
-docs/SquareDeleteCustomerCardInput.md
 docs/SquareMoney.md
 docs/SquareOrder.md
 docs/SquareOrderFulfillment.md
@@ -82,12 +81,10 @@ src/main/kotlin/com/adeptry/myorderapp/client/models/MoaOrderAddInput.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/MoaOrderCreateInput.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/MoaOrderPaginatedResponse.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/MoaOrderPayInput.kt
-src/main/kotlin/com/adeptry/myorderapp/client/models/MoaOrderRemoveInput.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/MoaVariation.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/SquareAddress.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/SquareCard.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/SquareCreateCustomerCardInput.kt
-src/main/kotlin/com/adeptry/myorderapp/client/models/SquareDeleteCustomerCardInput.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/SquareMoney.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/SquareOrder.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/SquareOrderFulfillment.kt

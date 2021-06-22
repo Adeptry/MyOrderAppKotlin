@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**getCurrentCustomersCurrentOrder**](OrdersApi.md#getCurrentCustomersCurrentOrder) | **GET** v1/customers/current/orders/current | 
 [**getOrderWithId**](OrdersApi.md#getOrderWithId) | **GET** v1/orders/{moaId} | 
 [**payForCurrentCustomersCurrentOrder**](OrdersApi.md#payForCurrentCustomersCurrentOrder) | **PUT** v1/customers/current/orders/current/payment | 
-[**removeVariationFromCurrentCustomersCurrentOrder**](OrdersApi.md#removeVariationFromCurrentCustomersCurrentOrder) | **DELETE** v1/customers/current/orders/current/variation | 
+[**removeVariationFromCurrentCustomersCurrentOrder**](OrdersApi.md#removeVariationFromCurrentCustomersCurrentOrder) | **DELETE** v1/customers/current/orders/current/variation/{orderVariationUid} | 
 
 
 
@@ -308,10 +308,10 @@ Configure bearer:
 val apiClient = ApiClient()
 apiClient.setBearerToken("TOKEN")
 val webService = apiClient.createWebservice(OrdersApi::class.java)
-val moaOrderRemoveInput : MoaOrderRemoveInput =  // MoaOrderRemoveInput | 
+val orderVariationUid : kotlin.String = orderVariationUid_example // kotlin.String | 
 
 launch(Dispatchers.IO) {
-    val result : MoaOrder = webService.removeVariationFromCurrentCustomersCurrentOrder(moaOrderRemoveInput)
+    val result : MoaOrder = webService.removeVariationFromCurrentCustomersCurrentOrder(orderVariationUid)
 }
 ```
 
@@ -319,7 +319,7 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **moaOrderRemoveInput** | [**MoaOrderRemoveInput**](MoaOrderRemoveInput.md)|  |
+ **orderVariationUid** | **kotlin.String**|  |
 
 ### Return type
 
@@ -333,6 +333,6 @@ Configure bearer:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
