@@ -11,24 +11,22 @@
 */
 package com.adeptry.myorderapp.client.models
 
+import com.adeptry.myorderapp.client.models.MoaAppConfigurationDto
 
 import com.squareup.moshi.Json
 import java.io.Serializable
 
 /**
  * 
- * @param paymentSquareId 
- * @param orderTipMoney 
- * @param idempotencyKey 
+ * @param ios 
+ * @param android 
  */
 
-data class MoaOrderPayInput (
-    @Json(name = "paymentSquareId")
-    val paymentSquareId: kotlin.String,
-    @Json(name = "orderTipMoney")
-    val orderTipMoney: Double,
-    @Json(name = "idempotencyKey")
-    val idempotencyKey: kotlin.String
+data class MoaConfigurationDto (
+    @Json(name = "ios")
+    val ios: MoaAppConfigurationDto? = null,
+    @Json(name = "android")
+    val android: MoaAppConfigurationDto? = null
 ) : Serializable {
     companion object {
         private const val serialVersionUID: Long = 123

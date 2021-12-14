@@ -17,18 +17,15 @@ import java.io.Serializable
 
 /**
  * 
- * @param paymentSquareId 
- * @param orderTipMoney 
- * @param idempotencyKey 
+ * @param optionalVersion 
+ * @param message 
  */
 
-data class MoaOrderPayInput (
-    @Json(name = "paymentSquareId")
-    val paymentSquareId: kotlin.String,
-    @Json(name = "orderTipMoney")
-    val orderTipMoney: Double,
-    @Json(name = "idempotencyKey")
-    val idempotencyKey: kotlin.String
+data class MoaOptionalUpdateDto (
+    @Json(name = "optionalVersion")
+    val optionalVersion: kotlin.String? = null,
+    @Json(name = "message")
+    val message: kotlin.String? = null
 ) : Serializable {
     companion object {
         private const val serialVersionUID: Long = 123

@@ -18,11 +18,20 @@ import java.io.Serializable
 /**
  * 
  * @param status 
+ * @param info 
+ * @param error 
+ * @param details 
  */
 
-data class MoaError (
+data class InlineResponse200 (
     @Json(name = "status")
-    val status: Double? = null
+    val status: kotlin.String? = null,
+    @Json(name = "info")
+    val info: kotlin.collections.Map<kotlin.String, kotlin.collections.Map<kotlin.String, kotlin.String>>? = null,
+    @Json(name = "error")
+    val error: kotlin.collections.Map<kotlin.String, kotlin.collections.Map<kotlin.String, kotlin.String>>? = null,
+    @Json(name = "details")
+    val details: kotlin.collections.Map<kotlin.String, kotlin.collections.Map<kotlin.String, kotlin.String>>? = null
 ) : Serializable {
     companion object {
         private const val serialVersionUID: Long = 123
