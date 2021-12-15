@@ -42,12 +42,9 @@ Class | Method | HTTP request | Description
 *CardsApi* | [**getCardsForCurrentCustomer**](docs/CardsApi.md#getcardsforcurrentcustomer) | **GET** v1/customers/current/cards | 
 *CatalogApi* | [**getCurrentCustomersMerchantsCatalog**](docs/CatalogApi.md#getcurrentcustomersmerchantscatalog) | **GET** v1/customers/current/merchant/catalog | 
 *CatalogApi* | [**getMerchantCatalog**](docs/CatalogApi.md#getmerchantcatalog) | **GET** v1/merchants/{moaId}/catalog | 
-*ConfigurationApi* | [**getConfiguration**](docs/ConfigurationApi.md#getconfiguration) | **GET** v1/configuration/{merchantMoaId} | 
 *CustomersApi* | [**createCustomer**](docs/CustomersApi.md#createcustomer) | **POST** v1/customers | 
 *CustomersApi* | [**getCurrentCustomer**](docs/CustomersApi.md#getcurrentcustomer) | **GET** v1/customers/current | 
 *CustomersApi* | [**updateCurrentCustomer**](docs/CustomersApi.md#updatecurrentcustomer) | **PATCH** v1/customers/current | 
-*HealthApi* | [**healthControllerCheckDatabase**](docs/HealthApi.md#healthcontrollercheckdatabase) | **GET** v1/health/database | 
-*HealthApi* | [**healthControllerThrowServerError**](docs/HealthApi.md#healthcontrollerthrowservererror) | **GET** v1/health/error | 
 *LocationsApi* | [**getCurrentCustomersMerchantsLocations**](docs/LocationsApi.md#getcurrentcustomersmerchantslocations) | **GET** v1/customers/current/merchant/locations | 
 *LocationsApi* | [**getMerchantLocations**](docs/LocationsApi.md#getmerchantlocations) | **GET** v1/merchants/{moaId}/locations | 
 *OrdersApi* | [**addVariationToCurrentCustomersCurrentOrder**](docs/OrdersApi.md#addvariationtocurrentcustomerscurrentorder) | **PUT** v1/customers/current/orders/current/variation | 
@@ -63,17 +60,12 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
- - [com.adeptry.myorderapp.client.models.InlineResponse200](docs/InlineResponse200.md)
- - [com.adeptry.myorderapp.client.models.InlineResponse503](docs/InlineResponse503.md)
  - [com.adeptry.myorderapp.client.models.MoaAWSS3File](docs/MoaAWSS3File.md)
- - [com.adeptry.myorderapp.client.models.MoaAlertDto](docs/MoaAlertDto.md)
- - [com.adeptry.myorderapp.client.models.MoaAppConfigurationDto](docs/MoaAppConfigurationDto.md)
  - [com.adeptry.myorderapp.client.models.MoaAuthenticationInput](docs/MoaAuthenticationInput.md)
  - [com.adeptry.myorderapp.client.models.MoaAuthenticationOutput](docs/MoaAuthenticationOutput.md)
  - [com.adeptry.myorderapp.client.models.MoaCatalog](docs/MoaCatalog.md)
  - [com.adeptry.myorderapp.client.models.MoaCategory](docs/MoaCategory.md)
  - [com.adeptry.myorderapp.client.models.MoaConfiguration](docs/MoaConfiguration.md)
- - [com.adeptry.myorderapp.client.models.MoaConfigurationDto](docs/MoaConfigurationDto.md)
  - [com.adeptry.myorderapp.client.models.MoaCustomer](docs/MoaCustomer.md)
  - [com.adeptry.myorderapp.client.models.MoaCustomerCreateInput](docs/MoaCustomerCreateInput.md)
  - [com.adeptry.myorderapp.client.models.MoaCustomerUpdateInput](docs/MoaCustomerUpdateInput.md)
@@ -83,7 +75,6 @@ Class | Method | HTTP request | Description
  - [com.adeptry.myorderapp.client.models.MoaMerchant](docs/MoaMerchant.md)
  - [com.adeptry.myorderapp.client.models.MoaModifier](docs/MoaModifier.md)
  - [com.adeptry.myorderapp.client.models.MoaModifierList](docs/MoaModifierList.md)
- - [com.adeptry.myorderapp.client.models.MoaOptionalUpdateDto](docs/MoaOptionalUpdateDto.md)
  - [com.adeptry.myorderapp.client.models.MoaOrder](docs/MoaOrder.md)
  - [com.adeptry.myorderapp.client.models.MoaOrderAddInput](docs/MoaOrderAddInput.md)
  - [com.adeptry.myorderapp.client.models.MoaOrderCreateInput](docs/MoaOrderCreateInput.md)
