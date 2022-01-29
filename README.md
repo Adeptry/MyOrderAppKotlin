@@ -36,7 +36,8 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AuthenticationApi* | [**authenticate**](docs/AuthenticationApi.md#authenticate) | **POST** v1/authentication | 
-*AuthenticationApi* | [**requestResetPassword**](docs/AuthenticationApi.md#requestresetpassword) | **POST** v1/authentication/password/reset/request | 
+*AuthenticationApi* | [**forgotPassword**](docs/AuthenticationApi.md#forgotpassword) | **POST** v1/authentication/forgot-password | 
+*AuthenticationApi* | [**resetPassword**](docs/AuthenticationApi.md#resetpassword) | **POST** v1/authentication/reset-password | 
 *CardsApi* | [**createCardForCurrentCustomer**](docs/CardsApi.md#createcardforcurrentcustomer) | **POST** v1/customers/current/cards | 
 *CardsApi* | [**deleteCardForCurrentCustomer**](docs/CardsApi.md#deletecardforcurrentcustomer) | **DELETE** v1/customers/current/cards/{squareId} | 
 *CardsApi* | [**getCardsForCurrentCustomer**](docs/CardsApi.md#getcardsforcurrentcustomer) | **GET** v1/customers/current/cards | 
@@ -80,7 +81,8 @@ Class | Method | HTTP request | Description
  - [com.adeptry.myorderapp.client.models.MoaOrderCreateInput](docs/MoaOrderCreateInput.md)
  - [com.adeptry.myorderapp.client.models.MoaOrderPaginatedResponse](docs/MoaOrderPaginatedResponse.md)
  - [com.adeptry.myorderapp.client.models.MoaOrderPayInput](docs/MoaOrderPayInput.md)
- - [com.adeptry.myorderapp.client.models.MoaPasswordResetRequest](docs/MoaPasswordResetRequest.md)
+ - [com.adeptry.myorderapp.client.models.MoaPasswordForgotInput](docs/MoaPasswordForgotInput.md)
+ - [com.adeptry.myorderapp.client.models.MoaPasswordResetInput](docs/MoaPasswordResetInput.md)
  - [com.adeptry.myorderapp.client.models.MoaVariation](docs/MoaVariation.md)
  - [com.adeptry.myorderapp.client.models.SquareAddress](docs/SquareAddress.md)
  - [com.adeptry.myorderapp.client.models.SquareCard](docs/SquareCard.md)

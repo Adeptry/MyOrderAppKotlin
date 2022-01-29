@@ -26,7 +26,8 @@ docs/MoaOrderAddInput.md
 docs/MoaOrderCreateInput.md
 docs/MoaOrderPaginatedResponse.md
 docs/MoaOrderPayInput.md
-docs/MoaPasswordResetRequest.md
+docs/MoaPasswordForgotInput.md
+docs/MoaPasswordResetInput.md
 docs/MoaVariation.md
 docs/OrdersApi.md
 docs/SquareAddress.md
@@ -86,7 +87,8 @@ src/main/kotlin/com/adeptry/myorderapp/client/models/MoaOrderAddInput.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/MoaOrderCreateInput.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/MoaOrderPaginatedResponse.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/MoaOrderPayInput.kt
-src/main/kotlin/com/adeptry/myorderapp/client/models/MoaPasswordResetRequest.kt
+src/main/kotlin/com/adeptry/myorderapp/client/models/MoaPasswordForgotInput.kt
+src/main/kotlin/com/adeptry/myorderapp/client/models/MoaPasswordResetInput.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/MoaVariation.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/SquareAddress.kt
 src/main/kotlin/com/adeptry/myorderapp/client/models/SquareCard.kt

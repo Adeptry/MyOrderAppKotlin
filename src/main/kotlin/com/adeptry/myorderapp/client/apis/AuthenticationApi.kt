@@ -7,7 +7,8 @@ import okhttp3.RequestBody
 
 import com.adeptry.myorderapp.client.models.MoaAuthenticationInput
 import com.adeptry.myorderapp.client.models.MoaAuthenticationOutput
-import com.adeptry.myorderapp.client.models.MoaPasswordResetRequest
+import com.adeptry.myorderapp.client.models.MoaPasswordForgotInput
+import com.adeptry.myorderapp.client.models.MoaPasswordResetInput
 
 interface AuthenticationApi {
     /**
@@ -30,10 +31,23 @@ interface AuthenticationApi {
      *  - 200: 
      *  - 201: 
      * 
-     * @param moaPasswordResetRequest  
+     * @param moaPasswordForgotInput  
      * @return [kotlin.Boolean]
      */
-    @POST("v1/authentication/password/reset/request")
-    suspend fun requestResetPassword(@Body moaPasswordResetRequest: MoaPasswordResetRequest): Response<kotlin.Boolean>
+    @POST("v1/authentication/forgot-password")
+    suspend fun forgotPassword(@Body moaPasswordForgotInput: MoaPasswordForgotInput): Response<kotlin.Boolean>
+
+    /**
+     * 
+     * 
+     * Responses:
+     *  - 200: 
+     *  - 201: 
+     * 
+     * @param moaPasswordResetInput  
+     * @return [kotlin.Boolean]
+     */
+    @POST("v1/authentication/reset-password")
+    suspend fun resetPassword(@Body moaPasswordResetInput: MoaPasswordResetInput): Response<kotlin.Boolean>
 
 }

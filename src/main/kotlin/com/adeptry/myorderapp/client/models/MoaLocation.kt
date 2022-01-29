@@ -19,6 +19,8 @@ import java.io.Serializable
 
 /**
  * 
+ * @param moaOrdinal 
+ * @param moaEnabled 
  * @param name 
  * @param description 
  * @param phoneNumber 
@@ -36,6 +38,10 @@ import java.io.Serializable
  */
 
 data class MoaLocation (
+    @Json(name = "moaOrdinal")
+    val moaOrdinal: Double? = null,
+    @Json(name = "moaEnabled")
+    val moaEnabled: kotlin.Boolean? = null,
     @Json(name = "name")
     val name: kotlin.String? = null,
     @Json(name = "description")

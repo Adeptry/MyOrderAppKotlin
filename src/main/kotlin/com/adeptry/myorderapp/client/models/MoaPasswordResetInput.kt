@@ -17,15 +17,15 @@ import java.io.Serializable
 
 /**
  * 
- * @param email 
- * @param merchantMoaId 
+ * @param requestMoaId 
+ * @param newPassword 
  */
 
-data class MoaPasswordResetRequest (
-    @Json(name = "email")
-    val email: kotlin.String,
-    @Json(name = "merchantMoaId")
-    val merchantMoaId: kotlin.String? = null
+data class MoaPasswordResetInput (
+    @Json(name = "requestMoaId")
+    val requestMoaId: kotlin.String,
+    @Json(name = "newPassword")
+    val newPassword: kotlin.String
 ) : Serializable {
     companion object {
         private const val serialVersionUID: Long = 123

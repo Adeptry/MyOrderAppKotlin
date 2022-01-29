@@ -4,6 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**moaOrdinal** | **Double** |  |  [optional]
+**moaEnabled** | **kotlin.Boolean** |  |  [optional]
 **name** | **kotlin.String** |  |  [optional]
 **description** | **kotlin.String** |  |  [optional]
 **phoneNumber** | **kotlin.String** |  |  [optional]

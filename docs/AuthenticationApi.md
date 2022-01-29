@@ -5,7 +5,8 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**authenticate**](AuthenticationApi.md#authenticate) | **POST** v1/authentication | 
-[**requestResetPassword**](AuthenticationApi.md#requestResetPassword) | **POST** v1/authentication/password/reset/request | 
+[**forgotPassword**](AuthenticationApi.md#forgotPassword) | **POST** v1/authentication/forgot-password | 
+[**resetPassword**](AuthenticationApi.md#resetPassword) | **POST** v1/authentication/reset-password | 
 
 
 
@@ -58,10 +59,10 @@ No authorization required
 
 val apiClient = ApiClient()
 val webService = apiClient.createWebservice(AuthenticationApi::class.java)
-val moaPasswordResetRequest : MoaPasswordResetRequest =  // MoaPasswordResetRequest | 
+val moaPasswordForgotInput : MoaPasswordForgotInput =  // MoaPasswordForgotInput | 
 
 launch(Dispatchers.IO) {
-    val result : kotlin.Boolean = webService.requestResetPassword(moaPasswordResetRequest)
+    val result : kotlin.Boolean = webService.forgotPassword(moaPasswordForgotInput)
 }
 ```
 
@@ -69,7 +70,45 @@ launch(Dispatchers.IO) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **moaPasswordResetRequest** | [**MoaPasswordResetRequest**](MoaPasswordResetRequest.md)|  |
+ **moaPasswordForgotInput** | [**MoaPasswordForgotInput**](MoaPasswordForgotInput.md)|  |
+
+### Return type
+
+**kotlin.Boolean**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+
+
+### Example
+```kotlin
+// Import classes:
+//import com.adeptry.myorderapp.client.*
+//import com.adeptry.myorderapp.client.infrastructure.*
+//import com.adeptry.myorderapp.client.models.*
+
+val apiClient = ApiClient()
+val webService = apiClient.createWebservice(AuthenticationApi::class.java)
+val moaPasswordResetInput : MoaPasswordResetInput =  // MoaPasswordResetInput | 
+
+launch(Dispatchers.IO) {
+    val result : kotlin.Boolean = webService.resetPassword(moaPasswordResetInput)
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **moaPasswordResetInput** | [**MoaPasswordResetInput**](MoaPasswordResetInput.md)|  |
 
 ### Return type
 
